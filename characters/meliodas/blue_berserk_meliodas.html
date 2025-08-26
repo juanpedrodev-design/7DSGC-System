@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7DSGC System</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../characters.css" />
+    <link rel="icon" type="image/x-icon" href="../../images/Icon.ico" />
+  </head>
+  <body>
+    <!-- Header com banner -->
+    <header>
+      <img src="../../images/Header.png" alt="Banner 7DSGC" class="banner" />
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="../../home.html">Home</a></li>
+        <li><a href="../../last_news.html">Últimas Notícias</a></li>
+        <li><a href="../../characters.html" class="active">Personagens</a></li>
+      </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="personagem-layout">
+      <!-- Coluna 1: Info básica -->
+      <section class="coluna info-basica">
+        <div class="personagem-header">
+          <img
+            src="../../images/Char Images/Blue_Berserk_Meliodas.png"
+            alt="Meliodas"
+            class="icone-personagem"
+          />
+          <h2>[Pesadelo Cruel]</h2><h1>Meliodas Furioso</h1>
+        </div>
+        <img
+        src="../../images/Char Art/Blue_Berserk_Meliodas_Art.png"
+        alt="Arte de Meliodas Furioso"
+        class="arte-personagem"
+      />
+      <div class="info-icon">
+      <img
+        src="../../images/"
+        alt="Grau Inicial"
+      />
+      <img
+        src="../../images/"
+        alt="Atributo"
+      />
+      <img
+        src="../../images/"
+        alt="Raça"
+      />
+      </div>
+      <div id="player"></div>
+      </section>
+
+      <!-- Coluna 2: Habilidades -->
+      <section class="coluna habilidades">
+        <h2>Habilidades</h2>
+        <div class="habilidade">
+          <img
+            src="../../images/Char Card Images/Blue_Berserk_Meliodas_Card1_1.png"
+            alt="Habilidade 1 - Nível 1"
+            class="active"
+            onclick="mostrarDescricao(this, 'habilidade1', 0)"
+       data-nivel="0" />
+          <img
+            src="../../images/Char Card Images/Blue_Berserk_Meliodas_Card1_2.png"
+            alt="Habilidade 1 - Nível 2"
+            onclick="mostrarDescricao(this, 'habilidade1', 1)"
+       data-nivel="1" />
+          <img
+            src="../../images/Char Card Images/Blue_Berserk_Meliodas_Card1_3.png"
+            alt="Habilidade 1 - Nível 3"
+            onclick="mostrarDescricao(this, 'habilidade1', 2)"
+       data-nivel="2" />
+          <p>
+            <strong>"Ataque Demoníaco"</strong>
+          </p>
+          <p id="habilidade1-desc"></p>
+        </div>
+        <div class="habilidade">
+          <img
+            src="../../images/Char Card Images/Blue_Berserk_Meliodas_Card2_1.png"
+            alt="Habilidade 2 - Nível 1"
+            class="active"
+            onclick="mostrarDescricao(this, 'habilidade2', 0)"
+       data-nivel="0" />
+          <img
+            src="../../images/Char Card Images/Blue_Berserk_Meliodas_Card2_2.png"
+            alt="Habilidade 2 - Nível 2"
+            onclick="mostrarDescricao(this, 'habilidade2', 1)"
+       data-nivel="1" />
+          <img
+            src="../../images/Char Card Images/Blue_Berserk_Meliodas_Card2_3.png"
+            alt="Habilidade 2 - Nível 3"
+            onclick="mostrarDescricao(this, 'habilidade2', 2)"
+       data-nivel="2" />
+          <p>
+            <strong>"Espada da Luz Sombria"</strong>
+          </p>
+          <p id="habilidade2-desc"></p>
+        </div>
+        <div class="habilidade ultimate">
+          <img
+            src="../../images/Char Card Images/Blue_Berserk_Meliodas_Card3.png"
+            alt="Ultimate"
+            class="active"
+          />
+           <div class="ult-niveis">
+             <label for="ult-range">Nível: <span id="ult-nivel">1</span>/6</label><br>
+             <input type="range" id="ult-range" min="1" max="6" value="1">
+           </div>
+          <p>
+            <strong>"Pressão Negra"</strong>
+          </p>
+          <p id="ult-desc"></p>
+        </div>
+        <iframe width="460" height="260" src="https://www.youtube.com/embed/uW0PcvHTOxo" title="[Cruel Nightmare] Berserk Meliodas Ultimate Move" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </section>
+
+      <!-- Coluna 3: Passiva e Relíquia -->
+      <section class="coluna passiva-reliquia">
+        <h2>Singular</h2>
+        <div class="passiva">
+          <img
+            src="../../images/Char Unique/Blue_Berserk_Meliodas_Unique.png"
+            alt="Passiva"
+          />
+          <p>
+            <strong>Pesadelo Galopante</strong>
+          </p>
+          <p>
+      Os PV Máximos do herói aumentam em 
+      <span class="destaque-amarelo">10%</span> 
+      por <span class="destaque-amarelo">cada</span> <span class="destaque-azul">aliado possível</span> a participar da batalha. <br>
+      <em><span class="destaque-cinza">* Aliados possíveis: Demônios e heróis com Mandamentos</span></em>
+    </p>
+
+    <p>
+      <span class="destaque-azul">Provoca</span> inimigos por 
+      <span class="destaque-amarelo">1 rodada</span> no início da batalha
+    </p>
+
+    <p>
+      Se houver <span class="destaque-amarelo">2</span> ou mais inimigos quando o herói <span class="destaque-azul">usa um ataque de alvo único</span> para causar dano, 
+      a <span class="destaque-azul">Marca do Pesadelo</span> do alvo é removida e uma nova 
+      <span class="destaque-azul">Marca do Pesadelo</span> é aplicada e dura 
+      <span class="destaque-amarelo">3 rodadas</span>.
+    </p>
+
+    <p>
+      <em><span class="destaque-cinza">* Marca do Pesadelo: apenas Meliodas Furioso pode ser visado. Não acumula com Fascinação, Marca ou Coagir.</span></em>
+    </p>
+
+    <p>
+        O dano recebido pelo herói de habilidades usadas por inimigos com <span class="destaque-azul">Marca do Pesadelo</span> não ultrapassa <span class="destaque-laranja">60%</span> dos PV Máximos do herói.
+    </p>
+    <p>
+      Se o herói atingir 2 vezes durante a rodada do inimigo, ou se um aliado possível morrer, o herói ganha Alvoroço por 2 rodadas.
+    </p>
+    <p>
+      Alvoroço: todos os atributos +10%.
+    </p>
+    <p>
+      Causa dano adicional equivalente a 30% dos PV Máximos do herói ao usar habilidades.
+    </p>
+    <p>
+      Imune a efeitos de Mandamentos.
+    </p>
+    <p>
+      Quando o herói causa dano ao inimigo ou quando um aliado possível recebe dano de uma habilidade durante a rodada do inimigo, o herói ganha 1 efeito que aumenta atributos de PV em 10%, até um máximo de 5, por 3 rodadas, e todos os inimigos são afetados por 1 efeito que aumenta seu dano recebido em 5%, até um máximo de 5, por 3 rodadas.
+    </p>
+
+  </div>
+        </div>
+
+        <h2>Relíquia Sagrada</h2>
+        <div class="reliquia">
+          <img
+            src="../../images/Relic Images/Blue_Berserk_Meliodas_Relic.png"
+            alt="Relíquia"
+          />
+          <p>Descrição da relíquia sagrada...</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>&copy; 2025 Wiki 7DSGC - Feito por fãs, para fãs.</p>
+    </footer>
+  </body>
+  <script>
+  // Todas as descrições ficam no script, em HTML
+  const habilidades = {
+    habilidade1: [
+      '<p>Causa dano de <span class="destaque-azul">Pesadelo</span> equivalente a <span class="destaque-amarelo">12%</span> dos PV Máximos.</p><p><span class="destaque-azul">*Pesadelo: aumento de <span class="destaque-amarelo">3x</span> da Taxa de Perfurar.</p><p><span class="destaque-azul">Dano Causado <span class="destaque-amarelo">+150%</span> quando Alvoroço estiver ativo.</span></p>',
+      '<p>Causa dano de <span class="destaque-azul">Pesadelo</span> equivalente a <span class="destaque-amarelo">18%</span> dos PV Máximos.</p><p><span class="destaque-azul">*Pesadelo: aumento de <span class="destaque-amarelo">3x</span> da Taxa de Perfurar.</p><p><span class="destaque-azul">Dano Causado <span class="destaque-amarelo">+150%</span> quando Alvoroço estiver ativo.</span></p>',
+      '<p>Causa dano de <span class="destaque-azul">Pesadelo</span> equivalente a <span class="destaque-amarelo">30%</span> dos PV Máximos.</p><p><span class="destaque-azul">*Pesadelo: aumento de <span class="destaque-amarelo">3x</span> da Taxa de Perfurar.</p><p><span class="destaque-azul">Dano Causado <span class="destaque-amarelo">+150%</span> quando Alvoroço estiver ativo.</span></p>'
+    ],
+    habilidade2: [
+      '<p>Causa dano de <span class="destaque-azul">Enxurrada</span> equivalente a <span class="destaque-amarelo">12%</span> dos PV restantes do herói em um inimigo.</p><p><span class="destaque-azul">*Enxurrada: <span class="destaque-amarelo">0.8%</span> de dano adicional para <span class="destaque-amarelo">cada ponto percentual</span> dos próprios PV Restantes.</span></p>',
+      '<p>Causa dano de <span class="destaque-azul">Enxurrada</span> equivalente a <span class="destaque-amarelo">18%</span> dos PV restantes do herói em um inimigo.</p><p><span class="destaque-azul">*Enxurrada: <span class="destaque-amarelo">0.8%</span> de dano adicional para <span class="destaque-amarelo">cada ponto percentual</span> dos próprios PV Restantes.</span></p>',
+      '<p>Causa dano de <span class="destaque-azul">Enxurrada</span> equivalente a <span class="destaque-amarelo">30%</span> dos PV restantes do herói em um inimigo.</p><p><span class="destaque-azul">*Enxurrada: <span class="destaque-amarelo">0.8%</span> de dano adicional para <span class="destaque-amarelo">cada ponto percentual</span> dos próprios PV Restantes.</span></p>'
+    ],
+  };
+
+  function mostrarDescricao(el, habilidadeId, nivel) {
+    // remove o active de todos os cards da mesma habilidade
+    let imgs = el.parentNode.querySelectorAll("img");
+    imgs.forEach(img => img.classList.remove("active"));
+
+    // coloca o active no clicado
+    el.classList.add("active");
+
+    // troca o texto usando innerHTML (permite <span>)
+    let desc = document.getElementById(habilidadeId + "-desc");
+    desc.innerHTML = habilidades[habilidadeId][nivel];
+  }
+
+  // quando a página carregar, já mostra o texto do card ativo
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".habilidade").forEach(hab => {
+      let ativo = hab.querySelector("img.active");
+      if (ativo) {
+        let habilidadeId = hab.querySelector("p[id]").id.replace("-desc", "");
+        let nivel = ativo.getAttribute("data-nivel"); // pegamos o nível do ativo
+        document.getElementById(habilidadeId + "-desc").innerHTML =
+          habilidades[habilidadeId][nivel];
+      }
+    });
+  });
+</script>
+<script>
+  const ultDescricoes = {
+    1: "Aumenta os atributos básicos em <span class=\"destaque-amarelo\">50%</span> por <span class=\"destaque-amarelo\">3 rodadas</span> e causa dano equivalente a <span class=\"destaque-amarelo\">350%</span> do Ataque em todos os inimigos.",
+    2: "Aumenta os atributos básicos em <span class=\"destaque-amarelo\">50%</span> por <span class=\"destaque-amarelo\">3 rodadas</span> e causa dano equivalente a <span class=\"destaque-amarelo\">385%</span> do Ataque em todos os inimigos.",
+    3: "Aumenta os atributos básicos em <span class=\"destaque-amarelo\">50%</span> por <span class=\"destaque-amarelo\">3 rodadas</span> e causa dano equivalente a <span class=\"destaque-amarelo\">420%</span> do Ataque em todos os inimigos.",
+    4: "Aumenta os atributos básicos em <span class=\"destaque-amarelo\">50%</span> por <span class=\"destaque-amarelo\">3 rodadas</span> e causa dano equivalente a <span class=\"destaque-amarelo\">455%</span> do Ataque em todos os inimigos.",
+    5: "Aumenta os atributos básicos em <span class=\"destaque-amarelo\">50%</span> por <span class=\"destaque-amarelo\">3 rodadas</span> e causa dano equivalente a <span class=\"destaque-amarelo\">490%</span> do Ataque em todos os inimigos.",
+    6: "Aumenta os atributos básicos em <span class=\"destaque-amarelo\">50%</span> por <span class=\"destaque-amarelo\">3 rodadas</span> e causa dano equivalente a <span class=\"destaque-amarelo\">525%</span> do Ataque em todos os inimigos."
+  };
+
+  const ultRange = document.getElementById("ult-range");
+  const ultNivel = document.getElementById("ult-nivel");
+  const ultDesc = document.getElementById("ult-desc");
+
+  function atualizarUlt(nivel) {
+    ultNivel.innerText = nivel;
+    ultDesc.innerHTML = ultDescricoes[nivel];
+  }
+
+  // evento ao mover slider
+  ultRange.addEventListener("input", () => {
+    atualizarUlt(ultRange.value);
+  });
+
+  // inicia no 1/6
+  atualizarUlt(1);
+</script>
+<script>
+    // Carrega a API do YouTube
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        videoId: 'INRpRRGcw94', // ID do vídeo
+        playerVars: {
+          autoplay: 1,
+          mute: 1,
+          loop: 1,
+          playlist: 'INRpRRGcw94', // necessário pro loop
+          controls: 0,
+          showinfo: 0,
+          modestbranding: 1,
+          fs: 0,
+          rel: 0
+        },
+        events: {
+          onReady: function (event) {
+            event.target.setPlaybackQuality('hd1080'); // força qualidade máxima
+            event.target.playVideo();
+          }
+        }
+      });
+    }
+  </script>
+</html>

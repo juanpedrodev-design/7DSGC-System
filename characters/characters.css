@@ -1,0 +1,170 @@
+html, body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* Layout da página de personagem */
+.personagem-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* 3 colunas, a do meio maior */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Colunas */
+.coluna {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Fundo */
+body {
+  background-color: #f5f5f5;
+}
+
+/* Header do personagem */
+.personagem-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-direction: column;
+}
+.personagem-header h1 {
+  font-size: 1.8rem;
+  color: #111;
+}
+.personagem-header h2 {
+  font-size: 1.0rem;
+  color: #111;
+  margin: -0.5rem 0;
+}
+.icone-personagem {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+.arte-personagem {
+  width: 300px;
+}
+.info-icon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 2rem;
+}
+
+/* Infos básicas */
+.dados-basicos {
+  list-style: none;
+}
+.dados-basicos li {
+  margin: 5px 0;
+}
+
+/* Habilidades */
+.habilidades .habilidade {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.habilidades img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 8px;
+}
+.habilidades img.active {
+    position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 4px #00aaff) drop-shadow(0 0 6px #00aaff);
+  transition: filter 0.3s ease;
+  }
+.habilidades p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 8px 2rem;
+}
+.ult-niveis {
+    margin: 10px 0;
+    text-align: center;
+  }
+.habilidade.ultimate p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 8px 5rem;
+}
+#ult-range {
+    width: 10rem;
+    margin-top: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    outline: none;
+    cursor: pointer;
+  }
+
+  /* bolinha do slider */
+  #ult-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #007bff;
+    box-shadow: 0 0 6px #00d4ff;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  #ult-range::-webkit-slider-thumb:hover {
+    background: #007bff;
+    border-color: #0056b3;
+  }
+
+/* Passiva e Relíquia */
+.passiva, .reliquia {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.passiva img, .reliquia img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.passiva p, .reliquia p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 8px 0;
+}
+
+/* Destaques coloridos */
+.destaque-amarelo {
+  color: #e6b800;
+  font-weight: bold;
+}
+.destaque-azul {
+  color: #44daff;
+  font-weight: bold;
+}
+.destaque-cinza {
+  color: #888888b2;
+  font-weight: bold;
+}
+.destaque-laranja {
+    color: #ff5e00;
+    font-weight: bold;
+}
+
+#player {
+      width: 250px;
+      height: 400px;
+      border-radius: 12px;
+      overflow: hidden;
+    }

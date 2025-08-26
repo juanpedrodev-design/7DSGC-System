@@ -1,0 +1,118 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte padrão */
+
+html {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Banner */
+header .banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navegação */
+.navbar {
+  background-color: #222;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.navbar li {
+  margin: 0 15px;
+}
+.navbar a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.3s;
+}
+.navbar a:hover,
+.navbar a.active {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+/* Conteúdo */
+main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+main h1 {
+  margin-bottom: 10px;
+  color: #111;
+}
+main p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Seções extras */
+.content-block {
+  margin: 40px 0;
+}
+.content-block h2 {
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-width: 150px;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;               /* ativa flexbox */
+  flex-direction: column;      /* mantém itens em coluna */
+  justify-content: center;     /* centraliza verticalmente */
+  align-items: center;         /* centraliza horizontalmente */
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
