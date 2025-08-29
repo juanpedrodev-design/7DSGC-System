@@ -29,7 +29,7 @@
       <section class="coluna info-basica">
         <div class="personagem-header">
           <img
-            src="../../images/Char Images/Blue_Berserk_Meliodas.png"
+            src="../../images/7DS Hero Icons/SSR/7DS/MeliodasAssault-B.png"
             alt="Meliodas"
             class="icone-personagem"
           />
@@ -42,19 +42,35 @@
       />
       <div class="info-icon">
       <img
-        src="../../images/"
+        src="../../images/rarity_ssr.png"
         alt="Grau Inicial"
       />
       <img
-        src="../../images/"
+        src="../../images/attribute_speed.png"
         alt="Atributo"
       />
       <img
-        src="../../images/"
+        src="../../images/race_demon.png"
         alt="Raça"
       />
       </div>
-      <div id="player"></div>
+      <div class="food">
+        <h2>Comida Favorita</h2>
+        <img
+          src="../../images/Foods/herb_grilled_beef.png"
+          alt="Comida Favorita"
+        />
+        <p>
+          Bife Grelhado com Ervas
+        </p>
+        <img
+          src="../../images/Foods/honey_pudding.png"
+          alt="Comida Favorita"
+        />
+        <p>
+          Pudim de Mel
+        </p>
+      </div>
       </section>
 
       <!-- Coluna 2: Habilidades -->
@@ -119,7 +135,6 @@
           </p>
           <p id="ult-desc"></p>
         </div>
-        <iframe width="460" height="260" src="https://www.youtube.com/embed/uW0PcvHTOxo" title="[Cruel Nightmare] Berserk Meliodas Ultimate Move" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </section>
 
       <!-- Coluna 3: Passiva e Relíquia -->
@@ -160,31 +175,35 @@
         O dano recebido pelo herói de habilidades usadas por inimigos com <span class="destaque-azul">Marca do Pesadelo</span> não ultrapassa <span class="destaque-laranja">60%</span> dos PV Máximos do herói.
     </p>
     <p>
-      Se o herói atingir 2 vezes durante a rodada do inimigo, ou se um aliado possível morrer, o herói ganha Alvoroço por 2 rodadas.
+      Se o herói atingir <span class="destaque-amarelo">2 vezes</span> durante a rodada do inimigo, ou se um <span class="destaque-azul">aliado possível</span> morrer, o herói ganha <span class="destaque-azul">Alvoroço</span> por <span class="destaque-amarelo">2 rodadas</span>.
     </p>
     <p>
-      Alvoroço: todos os atributos +10%.
+      <span class="destaque-cinza">Alvoroço: todos os atributos <span class="destaque-amarelo">+10%</span>.</span>
     </p>
     <p>
-      Causa dano adicional equivalente a 30% dos PV Máximos do herói ao usar habilidades.
+      <span class="destaque-cinza">Causa dano adicional equivalente a <span class="destaque-amarelo">30%</span> dos PV Máximos do herói ao usar habilidades.</span>
     </p>
     <p>
-      Imune a efeitos de Mandamentos.
+      <span class="destaque-cinza">Imune a efeitos de Mandamentos.</span>
     </p>
     <p>
-      Quando o herói causa dano ao inimigo ou quando um aliado possível recebe dano de uma habilidade durante a rodada do inimigo, o herói ganha 1 efeito que aumenta atributos de PV em 10%, até um máximo de 5, por 3 rodadas, e todos os inimigos são afetados por 1 efeito que aumenta seu dano recebido em 5%, até um máximo de 5, por 3 rodadas.
+      Quando o herói causa dano ao inimigo ou quando um <span class="destaque-azul">aliado possível</span> recebe dano de uma habilidade durante a rodada do inimigo, o herói ganha <span class="destaque-amarelo">1</span> efeito que aumenta atributos de PV em <span class="destaque-amarelo">10%</span>, até um máximo de <span class="destaque-amarelo">5</span>, por <span class="destaque-amarelo">3 rodadas</span>, e todos os inimigos são afetados por <span class="destaque-amarelo">1</span> efeito que aumenta seu <span class="destaque-azul">dano recebido</span> em <span class="destaque-amarelo">5%</span>, até um máximo de <span class="destaque-amarelo">5</span>, por <span class="destaque-amarelo">3 rodadas</span>.
     </p>
 
   </div>
         </div>
-
         <h2>Relíquia Sagrada</h2>
         <div class="reliquia">
           <img
             src="../../images/Relic Images/Blue_Berserk_Meliodas_Relic.png"
             alt="Relíquia"
           />
-          <p>Descrição da relíquia sagrada...</p>
+          <p>
+          Aumenta os atributos básicos do herói em <span class="destaque-amarelo"> 30%</span> por <span class="destaque-amarelo"> 2 rodadas</span> no início da batalha. Caso o herói <span class="destaque-azul"> não receba dano </span> durante a rodada dos inimigos,aplique o mesmo efeito no início da rodada dos aliados. Aumenta os atributos básicos dos <span class="destaque-azul"> aliados Demônios</span> em <span class="destaque-amarelo"> 5%</span> por <span class="destaque-amarelo"> cada </span> buff aplicado ao herói.
+          </p>
+          <p>
+            <span class="destaque-azul"> (Limite:<span class="destaque-azul"><span class="destaque-amarelo">3</span><span class="destaque-azul">)</span>
+          </p>
         </div>
       </section>
     </main>
@@ -262,35 +281,4 @@
   // inicia no 1/6
   atualizarUlt(1);
 </script>
-<script>
-    // Carrega a API do YouTube
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        videoId: 'INRpRRGcw94', // ID do vídeo
-        playerVars: {
-          autoplay: 1,
-          mute: 1,
-          loop: 1,
-          playlist: 'INRpRRGcw94', // necessário pro loop
-          controls: 0,
-          showinfo: 0,
-          modestbranding: 1,
-          fs: 0,
-          rel: 0
-        },
-        events: {
-          onReady: function (event) {
-            event.target.setPlaybackQuality('hd1080'); // força qualidade máxima
-            event.target.playVideo();
-          }
-        }
-      });
-    }
-  </script>
 </html>
