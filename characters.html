@@ -6,6 +6,7 @@
     <title>7DSGC System</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="images/Icon.ico" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- Header com banner -->
@@ -16,15 +17,2372 @@
     <!-- Menu de navegação -->
     <nav class="navbar">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="last_news.html">Últimas Notícias</a></li>
-        <li><a href="characters.html">Personagens</a></li>
+        <li><a href="characters.html" class="active">Personagens</a></li>
       </ul>
     </nav>
 
     <!-- Conteúdo principal -->
     <main>
-      <section class="intro"></section>
+      <h2>Personagens</h2>
+
+      <div class="filtro">
+        <input type="text" id="search" placeholder="Pesquisar personagem..." />
+        <select id="filtro-cor">
+          <option value="">Todas as cores</option>
+          <option value="R">Vermelho</option>
+          <option value="B">Azul</option>
+          <option value="G">Verde</option>
+          <option value="L">Luz</option>
+          <option value="D">Escuridão</option>
+        </select>
+      </div>
+
+      <div class="grid-personagens" id="grid-personagens">
+        <div class="personagem" data-nome="BannunchuckG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/LR/BanNunchuck-G.png"
+            alt="BannunchuckG"
+          />
+          <p>BannunchuckG</p>
+        </div>
+        <div class="personagem" data-nome="BrunhildR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/LR/Brunhild-R.png"
+            alt="BrunhildR"
+          />
+          <p>BrunhildR</p>
+        </div>
+        <div class="personagem" data-nome="DianequeenR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/LR/DianeQueen-R.png"
+            alt="DianequeenR"
+          />
+          <p>DianequeenR</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/LR/Elizabeth-R.png"
+            alt="ElizabethR"
+          />
+          <p>ElizabethR</p>
+        </div>
+        <div class="personagem" data-nome="EscanorG" data-cor="G">
+          <img src="../images/7DS Hero Icons/LR/Escanor-G.png" alt="EscanorG" />
+          <p>EscanorG</p>
+        </div>
+        <div class="personagem" data-nome="GallandB" data-cor="B">
+          <img src="../images/7DS Hero Icons/LR/Galland-B.png" alt="GallandB" />
+          <p>GallandB</p>
+        </div>
+        <div class="personagem" data-nome="GloxiniaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/LR/Gloxinia-G.png"
+            alt="GloxiniaG"
+          />
+          <p>GloxiniaG</p>
+        </div>
+        <div class="personagem" data-nome="HelbramR" data-cor="R">
+          <img src="../images/7DS Hero Icons/LR/Helbram-R.png" alt="HelbramR" />
+          <p>HelbramR</p>
+        </div>
+        <div class="personagem" data-nome="KingB" data-cor="B">
+          <img src="../images/7DS Hero Icons/LR/King-B.png" alt="KingB" />
+          <p>KingB</p>
+        </div>
+        <div class="personagem" data-nome="LilliaawkR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/LR/LilliaAwk-R.png"
+            alt="LilliaawkR"
+          />
+          <p>LilliaawkR</p>
+        </div>
+        <div class="personagem" data-nome="LudocielmargaretB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/LR/LudocielMargaret-B.png"
+            alt="LudocielmargaretB"
+          />
+          <p>LudocielmargaretB</p>
+        </div>
+        <div class="personagem" data-nome="MeliodaslvR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/LR/MeliodasLV-R.png"
+            alt="MeliodaslvR"
+          />
+          <p>MeliodaslvR</p>
+        </div>
+        <div class="personagem" data-nome="MerlinkidG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/LR/MerlinKid-G.png"
+            alt="MerlinkidG"
+          />
+          <p>MerlinkidG</p>
+        </div>
+        <div class="personagem" data-nome="MilimdragonR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/LR/MilimDragon-R.png"
+            alt="MilimdragonR"
+          />
+          <p>MilimdragonR</p>
+        </div>
+        <div class="personagem" data-nome="RimuruoctagramG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/LR/RimuruOctagram-G.png"
+            alt="RimuruoctagramG"
+          />
+          <p>RimuruoctagramG</p>
+        </div>
+        <div class="personagem" data-nome="ZeldrisB" data-cor="B">
+          <img src="../images/7DS Hero Icons/LR/Zeldris-B.png" alt="ZeldrisB" />
+          <p>ZeldrisB</p>
+        </div>
+        <div class="personagem" data-nome="ArthurchaosG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/UR/ArthurChaos-G.png"
+            alt="ArthurchaosG"
+          />
+          <p>ArthurchaosG</p>
+        </div>
+        <div class="personagem" data-nome="DemonkingzelD" data-cor="D">
+          <img
+            src="../images/7DS Hero Icons/UR/DemonKingZel-D.png"
+            alt="DemonkingzelD"
+          />
+          <p>DemonkingzelD</p>
+        </div>
+        <div class="personagem" data-nome="Elizabeth&meliodasL" data-cor="L">
+          <img
+            src="../images/7DS Hero Icons/UR/Elizabeth&Meliodas-L.png"
+            alt="Elizabeth&meliodasL"
+          />
+          <p>Elizabeth&meliodasL</p>
+        </div>
+        <div class="personagem" data-nome="EscanorindomitableG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/UR/EscanorIndomitable-G.png"
+            alt="EscanorindomitableG"
+          />
+          <p>EscanorindomitableG</p>
+        </div>
+        <div class="personagem" data-nome="GowtherbowR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/UR/GowtherBow-R.png"
+            alt="GowtherbowR"
+          />
+          <p>GowtherbowR</p>
+        </div>
+        <div class="personagem" data-nome="King&dianeB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/UR/King&Diane-B.png"
+            alt="King&dianeB"
+          />
+          <p>King&dianeB</p>
+        </div>
+        <div class="personagem" data-nome="LancelotB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/UR/Lancelot-B.png"
+            alt="LancelotB"
+          />
+          <p>LancelotB</p>
+        </div>
+        <div class="personagem" data-nome="MaeldespairD" data-cor="D">
+          <img
+            src="../images/7DS Hero Icons/UR/MaelDespair-D.png"
+            alt="MaeldespairD"
+          />
+          <p>MaeldespairD</p>
+        </div>
+        <div class="personagem" data-nome="MeliodasgodB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/UR/MeliodasGod-B.png"
+            alt="MeliodasgodB"
+          />
+          <p>MeliodasgodB</p>
+        </div>
+        <div class="personagem" data-nome="SabnakR" data-cor="R">
+          <img src="../images/7DS Hero Icons/UR/Sabnak-R.png" alt="SabnakR" />
+          <p>SabnakR</p>
+        </div>
+        <div class="personagem" data-nome="ThorB" data-cor="B">
+          <img src="../images/7DS Hero Icons/UR/Thor-B.png" alt="ThorB" />
+          <p>ThorB</p>
+        </div>
+        <div class="personagem" data-nome="VargheseR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/UR/Varghese-R.png"
+            alt="VargheseR"
+          />
+          <p>VargheseR</p>
+        </div>
+        <div class="personagem" data-nome="AnghalhadB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/4KOA/Anghalhad-B.png"
+            alt="AnghalhadB"
+          />
+          <p>AnghalhadB</p>
+        </div>
+        <div class="personagem" data-nome="NasiensG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/4KOA/Nasiens-G.png"
+            alt="NasiensG"
+          />
+          <p>NasiensG</p>
+        </div>
+        <div class="personagem" data-nome="PercivalG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/4KOA/Percival-G.png"
+            alt="PercivalG"
+          />
+          <p>PercivalG</p>
+        </div>
+        <div class="personagem" data-nome="PercivalmpL" data-cor="L">
+          <img
+            src="../images/7DS Hero Icons/SSR/4KOA/PercivalMP-L.png"
+            alt="PercivalmpL"
+          />
+          <p>PercivalmpL</p>
+        </div>
+        <div class="personagem" data-nome="TristankidB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/4KOA/TristanKid-B.png"
+            alt="TristankidB"
+          />
+          <p>TristankidB</p>
+        </div>
+        <div class="personagem" data-nome="TristankidG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/4KOA/TristanKid-G.png"
+            alt="TristankidG"
+          />
+          <p>TristankidG</p>
+        </div>
+        <div class="personagem" data-nome="BanB" data-cor="B">
+          <img src="../images/7DS Hero Icons/SSR/7DS/Ban-B.png" alt="BanB" />
+          <p>BanB</p>
+        </div>
+        <div class="personagem" data-nome="BanG" data-cor="G">
+          <img src="../images/7DS Hero Icons/SSR/7DS/Ban-G.png" alt="BanG" />
+          <p>BanG</p>
+        </div>
+        <div class="personagem" data-nome="BannchB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/BanNCH-B.png"
+            alt="BannchB"
+          />
+          <p>BannchB</p>
+        </div>
+        <div class="personagem" data-nome="BannchG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/BanNCH-G.png"
+            alt="BannchG"
+          />
+          <p>BannchG</p>
+        </div>
+        <div class="personagem" data-nome="BannchR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/BanNCH-R.png"
+            alt="BannchR"
+          />
+          <p>BannchR</p>
+        </div>
+        <div class="personagem" data-nome="BanpurgatoryR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/BanPurgatory-R.png"
+            alt="BanpurgatoryR"
+          />
+          <p>BanpurgatoryR</p>
+        </div>
+        <div class="personagem" data-nome="BanR" data-cor="R">
+          <img src="../images/7DS Hero Icons/SSR/7DS/Ban-R.png" alt="BanR" />
+          <p>BanR</p>
+        </div>
+        <div class="personagem" data-nome="BantranscendemtL" data-cor="L">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/BanTranscendemt-L.png"
+            alt="BantranscendemtL"
+          />
+          <p>BantranscendemtL</p>
+        </div>
+        <div class="personagem" data-nome="DianeB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Diane-B.png"
+            alt="DianeB"
+          />
+          <p>DianeB</p>
+        </div>
+        <div class="personagem" data-nome="DianeblessG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/DianeBless-G.png"
+            alt="DianeblessG"
+          />
+          <p>DianeblessG</p>
+        </div>
+        <div class="personagem" data-nome="DianeblessR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/DianeBless-R.png"
+            alt="DianeblessR"
+          />
+          <p>DianeblessR</p>
+        </div>
+        <div class="personagem" data-nome="DianeG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Diane-G.png"
+            alt="DianeG"
+          />
+          <p>DianeG</p>
+        </div>
+        <div class="personagem" data-nome="DianeguardianG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/DianeGuardian-G.png"
+            alt="DianeguardianG"
+          />
+          <p>DianeguardianG</p>
+        </div>
+        <div class="personagem" data-nome="DianematronaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/DianeMatrona-B.png"
+            alt="DianematronaB"
+          />
+          <p>DianematronaB</p>
+        </div>
+        <div class="personagem" data-nome="DianematronaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/DianeMatrona-G.png"
+            alt="DianematronaG"
+          />
+          <p>DianematronaG</p>
+        </div>
+        <div class="personagem" data-nome="DianematronaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/DianeMatrona-R.png"
+            alt="DianematronaR"
+          />
+          <p>DianematronaR</p>
+        </div>
+        <div class="personagem" data-nome="DianequeenG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/DianeQueen-G.png"
+            alt="DianequeenG"
+          />
+          <p>DianequeenG</p>
+        </div>
+        <div class="personagem" data-nome="DianequeenR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/DianeQueen-R.png"
+            alt="DianequeenR"
+          />
+          <p>DianequeenR</p>
+        </div>
+        <div class="personagem" data-nome="DianeR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Diane-R.png"
+            alt="DianeR"
+          />
+          <p>DianeR</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Elizabeth-B.png"
+            alt="ElizabethB"
+          />
+          <p>ElizabethB</p>
+        </div>
+        <div class="personagem" data-nome="Elizabethblood" data-cor="d">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/ElizabethBlood.png"
+            alt="Elizabethblood"
+          />
+          <p>Elizabethblood</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Elizabeth-G.png"
+            alt="ElizabethG"
+          />
+          <p>ElizabethG</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethgoddessB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/ElizabethGoddess-B.png"
+            alt="ElizabethgoddessB"
+          />
+          <p>ElizabethgoddessB</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethgoddessR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/ElizabethGoddess-R.png"
+            alt="ElizabethgoddessR"
+          />
+          <p>ElizabethgoddessR</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethhawkB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/ElizabethHawk-B.png"
+            alt="ElizabethhawkB"
+          />
+          <p>ElizabethhawkB</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethhawkR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/ElizabethHawk-R.png"
+            alt="ElizabethhawkR"
+          />
+          <p>ElizabethhawkR</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethqueenL" data-cor="L">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/ElizabethQueen-L.png"
+            alt="ElizabethqueenL"
+          />
+          <p>ElizabethqueenL</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Elizabeth-R.png"
+            alt="ElizabethR"
+          />
+          <p>ElizabethR</p>
+        </div>
+        <div class="personagem" data-nome="EscanorG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Escanor-G.png"
+            alt="EscanorG"
+          />
+          <p>EscanorG</p>
+        </div>
+        <div class="personagem" data-nome="EscanorR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Escanor-R.png"
+            alt="EscanorR"
+          />
+          <p>EscanorR</p>
+        </div>
+        <div class="personagem" data-nome="EscanortheoneB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/EscanorTheOne-B.png"
+            alt="EscanortheoneB"
+          />
+          <p>EscanortheoneB</p>
+        </div>
+        <div class="personagem" data-nome="EscanorultimateL" data-cor="L">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/EscanorUltimate-L.png"
+            alt="EscanorultimateL"
+          />
+          <p>EscanorultimateL</p>
+        </div>
+        <div class="personagem" data-nome="GowtherB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Gowther-B.png"
+            alt="GowtherB"
+          />
+          <p>GowtherB</p>
+        </div>
+        <div class="personagem" data-nome="GowtherG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Gowther-G.png"
+            alt="GowtherG"
+          />
+          <p>GowtherG</p>
+        </div>
+        <div class="personagem" data-nome="GowtherhijackG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/GowtherHijack-G.png"
+            alt="GowtherhijackG"
+          />
+          <p>GowtherhijackG</p>
+        </div>
+        <div class="personagem" data-nome="GowtherR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Gowther-R.png"
+            alt="GowtherR"
+          />
+          <p>GowtherR</p>
+        </div>
+        <div class="personagem" data-nome="KingB" data-cor="B">
+          <img src="../images/7DS Hero Icons/SSR/7DS/King-B.png" alt="KingB" />
+          <p>KingB</p>
+        </div>
+        <div class="personagem" data-nome="KingfatB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/KingFat-B.png"
+            alt="KingfatB"
+          />
+          <p>KingfatB</p>
+        </div>
+        <div class="personagem" data-nome="KingfatG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/KingFat-G.png"
+            alt="KingfatG"
+          />
+          <p>KingfatG</p>
+        </div>
+        <div class="personagem" data-nome="KingfatR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/KingFat-R.png"
+            alt="KingfatR"
+          />
+          <p>KingfatR</p>
+        </div>
+        <div class="personagem" data-nome="KingfwB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/KingFW-B.png"
+            alt="KingfwB"
+          />
+          <p>KingfwB</p>
+        </div>
+        <div class="personagem" data-nome="KingfwG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/KingFW-G.png"
+            alt="KingfwG"
+          />
+          <p>KingfwG</p>
+        </div>
+        <div class="personagem" data-nome="KingG" data-cor="G">
+          <img src="../images/7DS Hero Icons/SSR/7DS/King-G.png" alt="KingG" />
+          <p>KingG</p>
+        </div>
+        <div class="personagem" data-nome="KingR" data-cor="R">
+          <img src="../images/7DS Hero Icons/SSR/7DS/King-R.png" alt="KingR" />
+          <p>KingR</p>
+        </div>
+        <div class="personagem" data-nome="KingwB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/KingW-B.png"
+            alt="KingwB"
+          />
+          <p>KingwB</p>
+        </div>
+        <div class="personagem" data-nome="KingwG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/KingW-G.png"
+            alt="KingwG"
+          />
+          <p>KingwG</p>
+        </div>
+        <div class="personagem" data-nome="LizB" data-cor="B">
+          <img src="../images/7DS Hero Icons/SSR/7DS/Liz-B.png" alt="LizB" />
+          <p>LizB</p>
+        </div>
+        <div class="personagem" data-nome="LizG" data-cor="G">
+          <img src="../images/7DS Hero Icons/SSR/7DS/Liz-G.png" alt="LizG" />
+          <p>LizG</p>
+        </div>
+        <div class="personagem" data-nome="LizR" data-cor="R">
+          <img src="../images/7DS Hero Icons/SSR/7DS/Liz-R.png" alt="LizR" />
+          <p>LizR</p>
+        </div>
+        <div class="personagem" data-nome="MeliodasassaultB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MeliodasAssault-B.png"
+            alt="MeliodasassaultB"
+          />
+          <p>MeliodasassaultB</p>
+        </div>
+        <div class="personagem" data-nome="MeliodasassaultG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MeliodasAssault-G.png"
+            alt="MeliodasassaultG"
+          />
+          <p>MeliodasassaultG</p>
+        </div>
+        <div class="personagem" data-nome="MeliodasB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Meliodas-B.png"
+            alt="MeliodasB"
+          />
+          <p>MeliodasB</p>
+        </div>
+        <div class="personagem" data-nome="MeliodasdemonB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MeliodasDemon-B.png"
+            alt="MeliodasdemonB"
+          />
+          <p>MeliodasdemonB</p>
+        </div>
+        <div class="personagem" data-nome="MeliodasdemonG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MeliodasDemon-G.png"
+            alt="MeliodasdemonG"
+          />
+          <p>MeliodasdemonG</p>
+        </div>
+        <div class="personagem" data-nome="MeliodasdemonR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MeliodasDemon-R.png"
+            alt="MeliodasdemonR"
+          />
+          <p>MeliodasdemonR</p>
+        </div>
+        <div class="personagem" data-nome="MeliodasG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Meliodas-G.png"
+            alt="MeliodasG"
+          />
+          <p>MeliodasG</p>
+        </div>
+        <div class="personagem" data-nome="MeliodaslvB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MeliodasLV-B.png"
+            alt="MeliodaslvB"
+          />
+          <p>MeliodaslvB</p>
+        </div>
+        <div class="personagem" data-nome="MeliodaslvR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MeliodasLV-R.png"
+            alt="MeliodaslvR"
+          />
+          <p>MeliodaslvR</p>
+        </div>
+        <div class="personagem" data-nome="MeliodaspurgD" data-cor="D">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MeliodasPurg-D.png"
+            alt="MeliodaspurgD"
+          />
+          <p>MeliodaspurgD</p>
+        </div>
+        <div class="personagem" data-nome="MeliodasR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Meliodas-R.png"
+            alt="MeliodasR"
+          />
+          <p>MeliodasR</p>
+        </div>
+        <div class="personagem" data-nome="MeliodastD" data-cor="D">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MeliodasT-D.png"
+            alt="MeliodastD"
+          />
+          <p>MeliodastD</p>
+        </div>
+        <div class="personagem" data-nome="MerlinB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Merlin-B.png"
+            alt="MerlinB"
+          />
+          <p>MerlinB</p>
+        </div>
+        <div class="personagem" data-nome="MerlinG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Merlin-G.png"
+            alt="MerlinG"
+          />
+          <p>MerlinG</p>
+        </div>
+        <div class="personagem" data-nome="MerlininfinityB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MerlinInfinity-B.png"
+            alt="MerlininfinityB"
+          />
+          <p>MerlininfinityB</p>
+        </div>
+        <div class="personagem" data-nome="MerlininfinityG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MerlinInfinity-G.png"
+            alt="MerlininfinityG"
+          />
+          <p>MerlininfinityG</p>
+        </div>
+        <div class="personagem" data-nome="MerlinkidG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MerlinKid-G.png"
+            alt="MerlinkidG"
+          />
+          <p>MerlinkidG</p>
+        </div>
+        <div class="personagem" data-nome="MerlinR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/Merlin-R.png"
+            alt="MerlinR"
+          />
+          <p>MerlinR</p>
+        </div>
+        <div class="personagem" data-nome="MerlintruthB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MerlinTruth-B.png"
+            alt="MerlintruthB"
+          />
+          <p>MerlintruthB</p>
+        </div>
+        <div class="personagem" data-nome="MerlintruthG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MerlinTruth-G.png"
+            alt="MerlintruthG"
+          />
+          <p>MerlintruthG</p>
+        </div>
+        <div class="personagem" data-nome="MerlintruthR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/7DS/MerlinTruth-R.png"
+            alt="MerlintruthR"
+          />
+          <p>MerlintruthR</p>
+        </div>
+        <div class="personagem" data-nome="AinzB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Ainz-B.png"
+            alt="AinzB"
+          />
+          <p>AinzB</p>
+        </div>
+        <div class="personagem" data-nome="AlbedoB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Albedo-B.png"
+            alt="AlbedoB"
+          />
+          <p>AlbedoB</p>
+        </div>
+        <div class="personagem" data-nome="AlphaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Alpha-B.png"
+            alt="AlphaB"
+          />
+          <p>AlphaB</p>
+        </div>
+        <div class="personagem" data-nome="AthenaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Athena-G.png"
+            alt="AthenaG"
+          />
+          <p>AthenaG</p>
+        </div>
+        <div class="personagem" data-nome="BeruB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Beru-B.png"
+            alt="BeruB"
+          />
+          <p>BeruB</p>
+        </div>
+        <div class="personagem" data-nome="BetaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Beta-B.png"
+            alt="BetaB"
+          />
+          <p>BetaB</p>
+        </div>
+        <div class="personagem" data-nome="ChahaeinB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/ChaHaeIn-B.png"
+            alt="ChahaeinB"
+          />
+          <p>ChahaeinB</p>
+        </div>
+        <div class="personagem" data-nome="CocytusG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Cocytus-G.png"
+            alt="CocytusG"
+          />
+          <p>CocytusG</p>
+        </div>
+        <div class="personagem" data-nome="DemiurgeR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Demiurge-R.png"
+            alt="DemiurgeR"
+          />
+          <p>DemiurgeR</p>
+        </div>
+        <div class="personagem" data-nome="EchidnaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Echidna-G.png"
+            alt="EchidnaG"
+          />
+          <p>EchidnaG</p>
+        </div>
+        <div class="personagem" data-nome="ElevenB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Eleven-B.png"
+            alt="ElevenB"
+          />
+          <p>ElevenB</p>
+        </div>
+        <div class="personagem" data-nome="ErenfounderB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/ErenFounder-B.png"
+            alt="ErenfounderB"
+          />
+          <p>ErenfounderB</p>
+        </div>
+        <div class="personagem" data-nome="ErenG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Eren-G.png"
+            alt="ErenG"
+          />
+          <p>ErenG</p>
+        </div>
+        <div class="personagem" data-nome="ErisgreyratR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/ErisGreyrat-R.png"
+            alt="ErisgreyratR"
+          />
+          <p>ErisgreyratR</p>
+        </div>
+        <div class="personagem" data-nome="FiloG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Filo-G.png"
+            alt="FiloG"
+          />
+          <p>FiloG</p>
+        </div>
+        <div class="personagem" data-nome="FitoriaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Fitoria-B.png"
+            alt="FitoriaB"
+          />
+          <p>FitoriaB</p>
+        </div>
+        <div class="personagem" data-nome="GhislaineG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Ghislaine-G.png"
+            alt="GhislaineG"
+          />
+          <p>GhislaineG</p>
+        </div>
+        <div class="personagem" data-nome="GlassG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Glass-G.png"
+            alt="GlassG"
+          />
+          <p>GlassG</p>
+        </div>
+        <div class="personagem" data-nome="IoriG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Iori-G.png"
+            alt="IoriG"
+          />
+          <p>IoriG</p>
+        </div>
+        <div class="personagem" data-nome="JimR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Jim-R.png"
+            alt="JimR"
+          />
+          <p>JimR</p>
+        </div>
+        <div class="personagem" data-nome="JueviolegraceR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/JueVioleGrace-R.png"
+            alt="JueviolegraceR"
+          />
+          <p>JueviolegraceR</p>
+        </div>
+        <div class="personagem" data-nome="KizunaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Kizuna-R.png"
+            alt="KizunaR"
+          />
+          <p>KizunaR</p>
+        </div>
+        <div class="personagem" data-nome="KyoR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Kyo-R.png"
+            alt="KyoR"
+          />
+          <p>KyoR</p>
+        </div>
+        <div class="personagem" data-nome="LeviR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Levi-R.png"
+            alt="LeviR"
+          />
+          <p>LeviR</p>
+        </div>
+        <div class="personagem" data-nome="LevithunderG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/LeviThunder-G.png"
+            alt="LevithunderG"
+          />
+          <p>LevithunderG</p>
+        </div>
+        <div class="personagem" data-nome="MaiB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Mai-B.png"
+            alt="MaiB"
+          />
+          <p>MaiB</p>
+        </div>
+        <div class="personagem" data-nome="MikasaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Mikasa-B.png"
+            alt="MikasaB"
+          />
+          <p>MikasaB</p>
+        </div>
+        <div class="personagem" data-nome="MikeR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Mike-R.png"
+            alt="MikeR"
+          />
+          <p>MikeR</p>
+        </div>
+        <div class="personagem" data-nome="MilimB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Milim-B.png"
+            alt="MilimB"
+          />
+          <p>MilimB</p>
+        </div>
+        <div class="personagem" data-nome="MilimdragonR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/MilimDragon-R.png"
+            alt="MilimdragonR"
+          />
+          <p>MilimdragonR</p>
+        </div>
+        <div class="personagem" data-nome="NaofumiB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Naofumi-B.png"
+            alt="NaofumiB"
+          />
+          <p>NaofumiB</p>
+        </div>
+        <div class="personagem" data-nome="NarberalB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Narberal-B.png"
+            alt="NarberalB"
+          />
+          <p>NarberalB</p>
+        </div>
+        <div class="personagem" data-nome="RaphtaliaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Raphtalia-B.png"
+            alt="RaphtaliaB"
+          />
+          <p>RaphtaliaB</p>
+        </div>
+        <div class="personagem" data-nome="ReinhardR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Reinhard-R.png"
+            alt="ReinhardR"
+          />
+          <p>ReinhardR</p>
+        </div>
+        <div class="personagem" data-nome="RimuruB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Rimuru-B.png"
+            alt="RimuruB"
+          />
+          <p>RimuruB</p>
+        </div>
+        <div class="personagem" data-nome="RimuruoctaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/RimuruOcta-G.png"
+            alt="RimuruoctaG"
+          />
+          <p>RimuruoctaG</p>
+        </div>
+        <div class="personagem" data-nome="RoxymigurdiaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/RoxyMigurdia-G.png"
+            alt="RoxymigurdiaG"
+          />
+          <p>RoxymigurdiaG</p>
+        </div>
+        <div class="personagem" data-nome="RudeusR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Rudeus-R.png"
+            alt="RudeusR"
+          />
+          <p>RudeusR</p>
+        </div>
+        <div class="personagem" data-nome="RugalG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Rugal-G.png"
+            alt="RugalG"
+          />
+          <p>RugalG</p>
+        </div>
+        <div class="personagem" data-nome="ShadowG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Shadow-G.png"
+            alt="ShadowG"
+          />
+          <p>ShadowG</p>
+        </div>
+        <div class="personagem" data-nome="ShalltearR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Shalltear-R.png"
+            alt="ShalltearR"
+          />
+          <p>ShalltearR</p>
+        </div>
+        <div class="personagem" data-nome="ShionG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Shion-G.png"
+            alt="ShionG"
+          />
+          <p>ShionG</p>
+        </div>
+        <div class="personagem" data-nome="ShunaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Shuna-G.png"
+            alt="ShunaG"
+          />
+          <p>ShunaG</p>
+        </div>
+        <div class="personagem" data-nome="SungjinwooD" data-cor="D">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/SungJinwoo-D.png"
+            alt="SungjinwooD"
+          />
+          <p>SungjinwooD</p>
+        </div>
+        <div class="personagem" data-nome="TerryR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Terry-R.png"
+            alt="TerryR"
+          />
+          <p>TerryR</p>
+        </div>
+        <div class="personagem" data-nome="UrekmazinoB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/UrekMazino-B.png"
+            alt="UrekmazinoB"
+          />
+          <p>UrekmazinoB</p>
+        </div>
+        <div class="personagem" data-nome="WillG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Will-G.png"
+            alt="WillG"
+          />
+          <p>WillG</p>
+        </div>
+        <div class="personagem" data-nome="YihwayeonR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/YihwaYeon-R.png"
+            alt="YihwayeonR"
+          />
+          <p>YihwayeonR</p>
+        </div>
+        <div class="personagem" data-nome="YurizahardB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/YuriZahard-B.png"
+            alt="YurizahardB"
+          />
+          <p>YurizahardB</p>
+        </div>
+        <div class="personagem" data-nome="ZaharddataG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/ZahardData-G.png"
+            alt="ZaharddataG"
+          />
+          <p>ZaharddataG</p>
+        </div>
+        <div class="personagem" data-nome="ZenaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Collabs/Zena-B.png"
+            alt="ZenaB"
+          />
+          <p>ZenaB</p>
+        </div>
+        <div class="personagem" data-nome="ArthurB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Arthur-B.png"
+            alt="ArthurB"
+          />
+          <p>ArthurB</p>
+        </div>
+        <div class="personagem" data-nome="ArthurexG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/ArthurEx-G.png"
+            alt="ArthurexG"
+          />
+          <p>ArthurexG</p>
+        </div>
+        <div class="personagem" data-nome="ArthurexR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/ArthurEx-R.png"
+            alt="ArthurexR"
+          />
+          <p>ArthurexR</p>
+        </div>
+        <div class="personagem" data-nome="ArthurG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Arthur-G.png"
+            alt="ArthurG"
+          />
+          <p>ArthurG</p>
+        </div>
+        <div class="personagem" data-nome="ArthurR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Arthur-R.png"
+            alt="ArthurR"
+          />
+          <p>ArthurR</p>
+        </div>
+        <div class="personagem" data-nome="BaldrG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Baldr-G.png"
+            alt="BaldrG"
+          />
+          <p>BaldrG</p>
+        </div>
+        <div class="personagem" data-nome="BeatriceB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Beatrice-B.png"
+            alt="BeatriceB"
+          />
+          <p>BeatriceB</p>
+        </div>
+        <div class="personagem" data-nome="BellionB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Bellion-B.png"
+            alt="BellionB"
+          />
+          <p>BellionB</p>
+        </div>
+        <div class="personagem" data-nome="BenimaruR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Benimaru-R.png"
+            alt="BenimaruR"
+          />
+          <p>BenimaruR</p>
+        </div>
+        <div class="personagem" data-nome="BrynhildrG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Brynhildr-G.png"
+            alt="BrynhildrG"
+          />
+          <p>BrynhildrG</p>
+        </div>
+        <div class="personagem" data-nome="BrynhildrR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Brynhildr-R.png"
+            alt="BrynhildrR"
+          />
+          <p>BrynhildrR</p>
+        </div>
+        <div class="personagem" data-nome="CamilaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Camila-G.png"
+            alt="CamilaG"
+          />
+          <p>CamilaG</p>
+        </div>
+        <div class="personagem" data-nome="CamillaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Camilla-B.png"
+            alt="CamillaB"
+          />
+          <p>CamillaB</p>
+        </div>
+        <div class="personagem" data-nome="CamillaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Camilla-R.png"
+            alt="CamillaR"
+          />
+          <p>CamillaR</p>
+        </div>
+        <div class="personagem" data-nome="ChandlerB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Chandler-B.png"
+            alt="ChandlerB"
+          />
+          <p>ChandlerB</p>
+        </div>
+        <div class="personagem" data-nome="ChandleroriginalG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/ChandlerOriginal-G.png"
+            alt="ChandleroriginalG"
+          />
+          <p>ChandleroriginalG</p>
+        </div>
+        <div class="personagem" data-nome="ChandlerR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Chandler-R.png"
+            alt="ChandlerR"
+          />
+          <p>ChandlerR</p>
+        </div>
+        <div class="personagem" data-nome="CusackB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Cusack-B.png"
+            alt="CusackB"
+          />
+          <p>CusackB</p>
+        </div>
+        <div class="personagem" data-nome="Cusackoriginal" data-cor="l">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/CusackOriginal.png"
+            alt="Cusackoriginal"
+          />
+          <p>Cusackoriginal</p>
+        </div>
+        <div class="personagem" data-nome="DeathpierceG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Deathpierce-G.png"
+            alt="DeathpierceG"
+          />
+          <p>DeathpierceG</p>
+        </div>
+        <div class="personagem" data-nome="DeldryR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Deldry-R.png"
+            alt="DeldryR"
+          />
+          <p>DeldryR</p>
+        </div>
+        <div class="personagem" data-nome="DemonkingD" data-cor="D">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/DemonKing-D.png"
+            alt="DemonkingD"
+          />
+          <p>DemonkingD</p>
+        </div>
+        <div class="personagem" data-nome="DenzelR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Denzel-R.png"
+            alt="DenzelR"
+          />
+          <p>DenzelR</p>
+        </div>
+        <div class="personagem" data-nome="DerieriB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Derieri-B.png"
+            alt="DerieriB"
+          />
+          <p>DerieriB</p>
+        </div>
+        <div class="personagem" data-nome="DerieriG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Derieri-G.png"
+            alt="DerieriG"
+          />
+          <p>DerieriG</p>
+        </div>
+        <div class="personagem" data-nome="DerieriR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Derieri-R.png"
+            alt="DerieriR"
+          />
+          <p>DerieriR</p>
+        </div>
+        <div class="personagem" data-nome="DroleB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Drole-B.png"
+            alt="DroleB"
+          />
+          <p>DroleB</p>
+        </div>
+        <div class="personagem" data-nome="DroleG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Drole-G.png"
+            alt="DroleG"
+          />
+          <p>DroleG</p>
+        </div>
+        <div class="personagem" data-nome="EastinB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Eastin-B.png"
+            alt="EastinB"
+          />
+          <p>EastinB</p>
+        </div>
+        <div class="personagem" data-nome="EastinG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Eastin-G.png"
+            alt="EastinG"
+          />
+          <p>EastinG</p>
+        </div>
+        <div class="personagem" data-nome="EastinqueenG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/EastinQueen-G.png"
+            alt="EastinqueenG"
+          />
+          <p>EastinqueenG</p>
+        </div>
+        <div class="personagem" data-nome="EastinqueenR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/EastinQueen-R.png"
+            alt="EastinqueenR"
+          />
+          <p>EastinqueenR</p>
+        </div>
+        <div class="personagem" data-nome="EastinR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Eastin-R.png"
+            alt="EastinR"
+          />
+          <p>EastinR</p>
+        </div>
+        <div class="personagem" data-nome="ElaineB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Elaine-B.png"
+            alt="ElaineB"
+          />
+          <p>ElaineB</p>
+        </div>
+        <div class="personagem" data-nome="ElaineG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Elaine-G.png"
+            alt="ElaineG"
+          />
+          <p>ElaineG</p>
+        </div>
+        <div class="personagem" data-nome="ElaineR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Elaine-R.png"
+            alt="ElaineR"
+          />
+          <p>ElaineR</p>
+        </div>
+        <div class="personagem" data-nome="ElainewingB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/ElaineWing-B.png"
+            alt="ElainewingB"
+          />
+          <p>ElainewingB</p>
+        </div>
+        <div class="personagem" data-nome="ElainewingG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/ElaineWing-G.png"
+            alt="ElainewingG"
+          />
+          <p>ElainewingG</p>
+        </div>
+        <div class="personagem" data-nome="ElainewingR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/ElaineWing-R.png"
+            alt="ElainewingR"
+          />
+          <p>ElainewingR</p>
+        </div>
+        <div class="personagem" data-nome="EllateB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Ellate-B.png"
+            alt="EllateB"
+          />
+          <p>EllateB</p>
+        </div>
+        <div class="personagem" data-nome="EllateG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Ellate-G.png"
+            alt="EllateG"
+          />
+          <p>EllateG</p>
+        </div>
+        <div class="personagem" data-nome="EllateR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Ellate-R.png"
+            alt="EllateR"
+          />
+          <p>EllateR</p>
+        </div>
+        <div class="personagem" data-nome="EmiliaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Emilia-B.png"
+            alt="EmiliaB"
+          />
+          <p>EmiliaB</p>
+        </div>
+        <div class="personagem" data-nome="EstarossaberserkB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/EstarossaBerserk-B.png"
+            alt="EstarossaberserkB"
+          />
+          <p>EstarossaberserkB</p>
+        </div>
+        <div class="personagem" data-nome="EstarossaberserkR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/EstarossaBerserk-R.png"
+            alt="EstarossaberserkR"
+          />
+          <p>EstarossaberserkR</p>
+        </div>
+        <div class="personagem" data-nome="EstarossaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Estarossa-G.png"
+            alt="EstarossaG"
+          />
+          <p>EstarossaG</p>
+        </div>
+        <div class="personagem" data-nome="EstarossaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Estarossa-R.png"
+            alt="EstarossaR"
+          />
+          <p>EstarossaR</p>
+        </div>
+        <div class="personagem" data-nome="FraudrinB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Fraudrin-B.png"
+            alt="FraudrinB"
+          />
+          <p>FraudrinB</p>
+        </div>
+        <div class="personagem" data-nome="FraudrinG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Fraudrin-G.png"
+            alt="FraudrinG"
+          />
+          <p>FraudrinG</p>
+        </div>
+        <div class="personagem" data-nome="FreyjaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Freyja-G.png"
+            alt="FreyjaG"
+          />
+          <p>FreyjaG</p>
+        </div>
+        <div class="personagem" data-nome="FreyjaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Freyja-R.png"
+            alt="FreyjaR"
+          />
+          <p>FreyjaR</p>
+        </div>
+        <div class="personagem" data-nome="FreyrB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Freyr-B.png"
+            alt="FreyrB"
+          />
+          <p>FreyrB</p>
+        </div>
+        <div class="personagem" data-nome="FreyrR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Freyr-R.png"
+            alt="FreyrR"
+          />
+          <p>FreyrR</p>
+        </div>
+        <div class="personagem" data-nome="GallandB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Galland-B.png"
+            alt="GallandB"
+          />
+          <p>GallandB</p>
+        </div>
+        <div class="personagem" data-nome="GallandR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Galland-R.png"
+            alt="GallandR"
+          />
+          <p>GallandR</p>
+        </div>
+        <div class="personagem" data-nome="GeldabloodG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/GeldaBlood-G.png"
+            alt="GeldabloodG"
+          />
+          <p>GeldabloodG</p>
+        </div>
+        <div class="personagem" data-nome="GeldaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Gelda-R.png"
+            alt="GeldaR"
+          />
+          <p>GeldaR</p>
+        </div>
+        <div class="personagem" data-nome="GerhardeG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Gerharde-G.png"
+            alt="GerhardeG"
+          />
+          <p>GerhardeG</p>
+        </div>
+        <div class="personagem" data-nome="GilB" data-cor="B">
+          <img src="../images/7DS Hero Icons/SSR/Others/Gil-B.png" alt="GilB" />
+          <p>GilB</p>
+        </div>
+        <div class="personagem" data-nome="GilR" data-cor="R">
+          <img src="../images/7DS Hero Icons/SSR/Others/Gil-R.png" alt="GilR" />
+          <p>GilR</p>
+        </div>
+        <div class="personagem" data-nome="GloxiniaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Gloxinia-G.png"
+            alt="GloxiniaG"
+          />
+          <p>GloxiniaG</p>
+        </div>
+        <div class="personagem" data-nome="GloxiniaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Gloxinia-R.png"
+            alt="GloxiniaR"
+          />
+          <p>GloxiniaR</p>
+        </div>
+        <div class="personagem" data-nome="GriamoreB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Griamore-B.png"
+            alt="GriamoreB"
+          />
+          <p>GriamoreB</p>
+        </div>
+        <div class="personagem" data-nome="GriamoreG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Griamore-G.png"
+            alt="GriamoreG"
+          />
+          <p>GriamoreG</p>
+        </div>
+        <div class="personagem" data-nome="GuilaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Guila-G.png"
+            alt="GuilaG"
+          />
+          <p>GuilaG</p>
+        </div>
+        <div class="personagem" data-nome="GuilaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Guila-R.png"
+            alt="GuilaR"
+          />
+          <p>GuilaR</p>
+        </div>
+        <div class="personagem" data-nome="HawkG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Hawk-G.png"
+            alt="HawkG"
+          />
+          <p>HawkG</p>
+        </div>
+        <div class="personagem" data-nome="HawkosloB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/HawkOslo-B.png"
+            alt="HawkosloB"
+          />
+          <p>HawkosloB</p>
+        </div>
+        <div class="personagem" data-nome="HawkosloG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/HawkOslo-G.png"
+            alt="HawkosloG"
+          />
+          <p>HawkosloG</p>
+        </div>
+        <div class="personagem" data-nome="HawkosloR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/HawkOslo-R.png"
+            alt="HawkosloR"
+          />
+          <p>HawkosloR</p>
+        </div>
+        <div class="personagem" data-nome="HawkR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Hawk-R.png"
+            alt="HawkR"
+          />
+          <p>HawkR</p>
+        </div>
+        <div class="personagem" data-nome="HelbramaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/HelbramA-B.png"
+            alt="HelbramaB"
+          />
+          <p>HelbramaB</p>
+        </div>
+        <div class="personagem" data-nome="HelbramB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Helbram-B.png"
+            alt="HelbramB"
+          />
+          <p>HelbramB</p>
+        </div>
+        <div class="personagem" data-nome="HelbramG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Helbram-G.png"
+            alt="HelbramG"
+          />
+          <p>HelbramG</p>
+        </div>
+        <div class="personagem" data-nome="HelbramR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Helbram-R.png"
+            alt="HelbramR"
+          />
+          <p>HelbramR</p>
+        </div>
+        <div class="personagem" data-nome="HelD" data-cor="D">
+          <img src="../images/7DS Hero Icons/SSR/Others/Hel-D.png" alt="HelD" />
+          <p>HelD</p>
+        </div>
+        <div class="personagem" data-nome="HelscytheG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/HelScythe-G.png"
+            alt="HelscytheG"
+          />
+          <p>HelscytheG</p>
+        </div>
+        <div class="personagem" data-nome="HendricksonB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Hendrickson-B.png"
+            alt="HendricksonB"
+          />
+          <p>HendricksonB</p>
+        </div>
+        <div class="personagem" data-nome="HendricksondG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/HendricksonD-G.png"
+            alt="HendricksondG"
+          />
+          <p>HendricksondG</p>
+        </div>
+        <div class="personagem" data-nome="HowzerB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Howzer-B.png"
+            alt="HowzerB"
+          />
+          <p>HowzerB</p>
+        </div>
+        <div class="personagem" data-nome="HowzerR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Howzer-R.png"
+            alt="HowzerR"
+          />
+          <p>HowzerR</p>
+        </div>
+        <div class="personagem" data-nome="JennaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Jenna-B.png"
+            alt="JennaB"
+          />
+          <p>JennaB</p>
+        </div>
+        <div class="personagem" data-nome="JennaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Jenna-R.png"
+            alt="JennaR"
+          />
+          <p>JennaR</p>
+        </div>
+        <div class="personagem" data-nome="JerichoB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Jericho-B.png"
+            alt="JerichoB"
+          />
+          <p>JerichoB</p>
+        </div>
+        <div class="personagem" data-nome="JerichoG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Jericho-G.png"
+            alt="JerichoG"
+          />
+          <p>JerichoG</p>
+        </div>
+        <div class="personagem" data-nome="JerichoR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Jericho-R.png"
+            alt="JerichoR"
+          />
+          <p>JerichoR</p>
+        </div>
+        <div class="personagem" data-nome="JormungandG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Jormungand-G.png"
+            alt="JormungandG"
+          />
+          <p>JormungandG</p>
+        </div>
+        <div class="personagem" data-nome="JormungandR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Jormungand-R.png"
+            alt="JormungandR"
+          />
+          <p>JormungandR</p>
+        </div>
+        <div class="personagem" data-nome="LilliaaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/LilliaA-B.png"
+            alt="LilliaaB"
+          />
+          <p>LilliaaB</p>
+        </div>
+        <div class="personagem" data-nome="LilliaaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/LilliaA-R.png"
+            alt="LilliaaR"
+          />
+          <p>LilliaaR</p>
+        </div>
+        <div class="personagem" data-nome="LilliaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Lillia-B.png"
+            alt="LilliaB"
+          />
+          <p>LilliaB</p>
+        </div>
+        <div class="personagem" data-nome="LilliaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Lillia-G.png"
+            alt="LilliaG"
+          />
+          <p>LilliaG</p>
+        </div>
+        <div class="personagem" data-nome="LudocielB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Ludociel-B.png"
+            alt="LudocielB"
+          />
+          <p>LudocielB</p>
+        </div>
+        <div class="personagem" data-nome="LudocielG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Ludociel-G.png"
+            alt="LudocielG"
+          />
+          <p>LudocielG</p>
+        </div>
+        <div class="personagem" data-nome="LudocielmargaretB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/LudocielMargaret-B.png"
+            alt="LudocielmargaretB"
+          />
+          <p>LudocielmargaretB</p>
+        </div>
+        <div class="personagem" data-nome="LudocielmargaretR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/LudocielMargaret-R.png"
+            alt="LudocielmargaretR"
+          />
+          <p>LudocielmargaretR</p>
+        </div>
+        <div class="personagem" data-nome="MaelL" data-cor="L">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Mael-L.png"
+            alt="MaelL"
+          />
+          <p>MaelL</p>
+        </div>
+        <div class="personagem" data-nome="MatronaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Matrona-B.png"
+            alt="MatronaB"
+          />
+          <p>MatronaB</p>
+        </div>
+        <div class="personagem" data-nome="MatronaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Matrona-G.png"
+            alt="MatronaG"
+          />
+          <p>MatronaG</p>
+        </div>
+        <div class="personagem" data-nome="MatronaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Matrona-R.png"
+            alt="MatronaR"
+          />
+          <p>MatronaR</p>
+        </div>
+        <div class="personagem" data-nome="MegelldaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Megellda-B.png"
+            alt="MegelldaB"
+          />
+          <p>MegelldaB</p>
+        </div>
+        <div class="personagem" data-nome="MegelldaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Megellda-R.png"
+            alt="MegelldaR"
+          />
+          <p>MegelldaR</p>
+        </div>
+        <div class="personagem" data-nome="MelasculaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Melascula-B.png"
+            alt="MelasculaB"
+          />
+          <p>MelasculaB</p>
+        </div>
+        <div class="personagem" data-nome="MelasculaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Melascula-G.png"
+            alt="MelasculaG"
+          />
+          <p>MelasculaG</p>
+        </div>
+        <div class="personagem" data-nome="MelasculaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Melascula-R.png"
+            alt="MelasculaR"
+          />
+          <p>MelasculaR</p>
+        </div>
+        <div class="personagem" data-nome="MonoB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Mono-B.png"
+            alt="MonoB"
+          />
+          <p>MonoB</p>
+        </div>
+        <div class="personagem" data-nome="MonoG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Mono-G.png"
+            alt="MonoG"
+          />
+          <p>MonoG</p>
+        </div>
+        <div class="personagem" data-nome="MonoironB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/MonoIron-B.png"
+            alt="MonoironB"
+          />
+          <p>MonoironB</p>
+        </div>
+        <div class="personagem" data-nome="MonoironG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/MonoIron-G.png"
+            alt="MonoironG"
+          />
+          <p>MonoironG</p>
+        </div>
+        <div class="personagem" data-nome="MonoR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Mono-R.png"
+            alt="MonoR"
+          />
+          <p>MonoR</p>
+        </div>
+        <div class="personagem" data-nome="MonspeetG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Monspeet-G.png"
+            alt="MonspeetG"
+          />
+          <p>MonspeetG</p>
+        </div>
+        <div class="personagem" data-nome="MonspeetR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Monspeet-R.png"
+            alt="MonspeetR"
+          />
+          <p>MonspeetR</p>
+        </div>
+        <div class="personagem" data-nome="NanashiB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Nanashi-B.png"
+            alt="NanashiB"
+          />
+          <p>NanashiB</p>
+        </div>
+        <div class="personagem" data-nome="PellegardeR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Pellegarde-R.png"
+            alt="PellegardeR"
+          />
+          <p>PellegardeR</p>
+        </div>
+        <div class="personagem" data-nome="RamG" data-cor="G">
+          <img src="../images/7DS Hero Icons/SSR/Others/Ram-G.png" alt="RamG" />
+          <p>RamG</p>
+        </div>
+        <div class="personagem" data-nome="RemR" data-cor="R">
+          <img src="../images/7DS Hero Icons/SSR/Others/Rem-R.png" alt="RemR" />
+          <p>RemR</p>
+        </div>
+        <div class="personagem" data-nome="RoxyB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Roxy-B.png"
+            alt="RoxyB"
+          />
+          <p>RoxyB</p>
+        </div>
+        <div class="personagem" data-nome="RoxyG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Roxy-G.png"
+            alt="RoxyG"
+          />
+          <p>RoxyG</p>
+        </div>
+        <div class="personagem" data-nome="RoxymadB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/RoxyMad-B.png"
+            alt="RoxymadB"
+          />
+          <p>RoxymadB</p>
+        </div>
+        <div class="personagem" data-nome="RoxymadR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/RoxyMad-R.png"
+            alt="RoxymadR"
+          />
+          <p>RoxymadR</p>
+        </div>
+        <div class="personagem" data-nome="RoxyR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Roxy-R.png"
+            alt="RoxyR"
+          />
+          <p>RoxyR</p>
+        </div>
+        <div class="personagem" data-nome="SarielR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Sariel-R.png"
+            alt="SarielR"
+          />
+          <p>SarielR</p>
+        </div>
+        <div class="personagem" data-nome="SarielsolaG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/SarielSola-G.png"
+            alt="SarielsolaG"
+          />
+          <p>SarielsolaG</p>
+        </div>
+        <div class="personagem" data-nome="SarielsolaR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/SarielSola-R.png"
+            alt="SarielsolaR"
+          />
+          <p>SarielsolaR</p>
+        </div>
+        <div class="personagem" data-nome="ShinB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Shin-B.png"
+            alt="ShinB"
+          />
+          <p>ShinB</p>
+        </div>
+        <div class="personagem" data-nome="ShinG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Shin-G.png"
+            alt="ShinG"
+          />
+          <p>ShinG</p>
+        </div>
+        <div class="personagem" data-nome="ShinR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Shin-R.png"
+            alt="ShinR"
+          />
+          <p>ShinR</p>
+        </div>
+        <div class="personagem" data-nome="SigurdG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Sigurd-G.png"
+            alt="SigurdG"
+          />
+          <p>SigurdG</p>
+        </div>
+        <div class="personagem" data-nome="SigurdR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Sigurd-R.png"
+            alt="SigurdR"
+          />
+          <p>SigurdR</p>
+        </div>
+        <div class="personagem" data-nome="Skadi" data-cor="i">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Skadi.png"
+            alt="Skadi"
+          />
+          <p>Skadi</p>
+        </div>
+        <div class="personagem" data-nome="SkadiB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Skadi-B.png"
+            alt="SkadiB"
+          />
+          <p>SkadiB</p>
+        </div>
+        <div class="personagem" data-nome="SkadiG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Skadi-G.png"
+            alt="SkadiG"
+          />
+          <p>SkadiG</p>
+        </div>
+        <div class="personagem" data-nome="SlaterB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Slater-B.png"
+            alt="SlaterB"
+          />
+          <p>SlaterB</p>
+        </div>
+        <div class="personagem" data-nome="SlaterR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Slater-R.png"
+            alt="SlaterR"
+          />
+          <p>SlaterR</p>
+        </div>
+        <div class="personagem" data-nome="TarmielarbusR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/TarmielArbus-R.png"
+            alt="TarmielarbusR"
+          />
+          <p>TarmielarbusR</p>
+        </div>
+        <div class="personagem" data-nome="TarmielB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Tarmiel-B.png"
+            alt="TarmielB"
+          />
+          <p>TarmielB</p>
+        </div>
+        <div class="personagem" data-nome="ThonarG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Thonar-G.png"
+            alt="ThonarG"
+          />
+          <p>ThonarG</p>
+        </div>
+        <div class="personagem" data-nome="ThonarR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Thonar-R.png"
+            alt="ThonarR"
+          />
+          <p>ThonarR</p>
+        </div>
+        <div class="personagem" data-nome="TyrG" data-cor="G">
+          <img src="../images/7DS Hero Icons/SSR/Others/Tyr-G.png" alt="TyrG" />
+          <p>TyrG</p>
+        </div>
+        <div class="personagem" data-nome="TyrR" data-cor="R">
+          <img src="../images/7DS Hero Icons/SSR/Others/Tyr-R.png" alt="TyrR" />
+          <p>TyrR</p>
+        </div>
+        <div class="personagem" data-nome="ValentiB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Valenti-B.png"
+            alt="ValentiB"
+          />
+          <p>ValentiB</p>
+        </div>
+        <div class="personagem" data-nome="ValentiG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Valenti-G.png"
+            alt="ValentiG"
+          />
+          <p>ValentiG</p>
+        </div>
+        <div class="personagem" data-nome="Valentimk2B" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/ValentiMK2-B.png"
+            alt="Valentimk2B"
+          />
+          <p>Valentimk2B</p>
+        </div>
+        <div class="personagem" data-nome="Valentimk2G" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/ValentiMK2-G.png"
+            alt="Valentimk2G"
+          />
+          <p>Valentimk2G</p>
+        </div>
+        <div class="personagem" data-nome="Valentimk2R" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/ValentiMK2-R.png"
+            alt="Valentimk2R"
+          />
+          <p>Valentimk2R</p>
+        </div>
+        <div class="personagem" data-nome="VargheseG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Varghese-G.png"
+            alt="VargheseG"
+          />
+          <p>VargheseG</p>
+        </div>
+        <div class="personagem" data-nome="WildG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Wild-G.png"
+            alt="WildG"
+          />
+          <p>WildG</p>
+        </div>
+        <div class="personagem" data-nome="ZaneriB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Zaneri-B.png"
+            alt="ZaneriB"
+          />
+          <p>ZaneriB</p>
+        </div>
+        <div class="personagem" data-nome="ZaneriG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Zaneri-G.png"
+            alt="ZaneriG"
+          />
+          <p>ZaneriG</p>
+        </div>
+        <div class="personagem" data-nome="ZaratrasG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Zaratras-G.png"
+            alt="ZaratrasG"
+          />
+          <p>ZaratrasG</p>
+        </div>
+        <div class="personagem" data-nome="ZeldrisB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Zeldris-B.png"
+            alt="ZeldrisB"
+          />
+          <p>ZeldrisB</p>
+        </div>
+        <div class="personagem" data-nome="ZeldrisonB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/ZeldrisON-B.png"
+            alt="ZeldrisonB"
+          />
+          <p>ZeldrisonB</p>
+        </div>
+        <div class="personagem" data-nome="ZeldrisR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/Zeldris-R.png"
+            alt="ZeldrisR"
+          />
+          <p>ZeldrisR</p>
+        </div>
+        <div class="personagem" data-nome="ZeldriswingG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SSR/Others/ZeldrisWing-G.png"
+            alt="ZeldriswingG"
+          />
+          <p>ZeldriswingG</p>
+        </div>
+        <div class="personagem" data-nome="BanR" data-cor="R">
+          <img src="../images/7DS Hero Icons/SR/7DS/Ban-R.png" alt="BanR" />
+          <p>BanR</p>
+        </div>
+        <div class="personagem" data-nome="DianeR" data-cor="R">
+          <img src="../images/7DS Hero Icons/SR/7DS/Diane-R.png" alt="DianeR" />
+          <p>DianeR</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethhawkG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SR/7DS/ElizabethHawk-G.png"
+            alt="ElizabethhawkG"
+          />
+          <p>ElizabethhawkG</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethhawkR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SR/7DS/ElizabethHawk-R.png"
+            alt="ElizabethhawkR"
+          />
+          <p>ElizabethhawkR</p>
+        </div>
+        <div class="personagem" data-nome="ElizabethR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SR/7DS/Elizabeth-R.png"
+            alt="ElizabethR"
+          />
+          <p>ElizabethR</p>
+        </div>
+        <div class="personagem" data-nome="GowtherG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SR/7DS/Gowther-G.png"
+            alt="GowtherG"
+          />
+          <p>GowtherG</p>
+        </div>
+        <div class="personagem" data-nome="MeliodasB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SR/7DS/Meliodas-B.png"
+            alt="MeliodasB"
+          />
+          <p>MeliodasB</p>
+        </div>
+        <div class="personagem" data-nome="ArdenB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Arden-B.png"
+            alt="ArdenB"
+          />
+          <p>ArdenB</p>
+        </div>
+        <div class="personagem" data-nome="ArthurB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Arthur-B.png"
+            alt="ArthurB"
+          />
+          <p>ArthurB</p>
+        </div>
+        <div class="personagem" data-nome="CainG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Cain-G.png"
+            alt="CainG"
+          />
+          <p>CainG</p>
+        </div>
+        <div class="personagem" data-nome="DogedoR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Dogedo-R.png"
+            alt="DogedoR"
+          />
+          <p>DogedoR</p>
+        </div>
+        <div class="personagem" data-nome="DreyfusG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Dreyfus-G.png"
+            alt="DreyfusG"
+          />
+          <p>DreyfusG</p>
+        </div>
+        <div class="personagem" data-nome="DreyfusR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Dreyfus-R.png"
+            alt="DreyfusR"
+          />
+          <p>DreyfusR</p>
+        </div>
+        <div class="personagem" data-nome="ErenB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Eren-B.png"
+            alt="ErenB"
+          />
+          <p>ErenB</p>
+        </div>
+        <div class="personagem" data-nome="FreesiaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Freesia-B.png"
+            alt="FreesiaB"
+          />
+          <p>FreesiaB</p>
+        </div>
+        <div class="personagem" data-nome="GilB" data-cor="B">
+          <img src="../images/7DS Hero Icons/SR/Others/Gil-B.png" alt="GilB" />
+          <p>GilB</p>
+        </div>
+        <div class="personagem" data-nome="GilG" data-cor="G">
+          <img src="../images/7DS Hero Icons/SR/Others/Gil-G.png" alt="GilG" />
+          <p>GilG</p>
+        </div>
+        <div class="personagem" data-nome="GriamoreB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Griamore-B.png"
+            alt="GriamoreB"
+          />
+          <p>GriamoreB</p>
+        </div>
+        <div class="personagem" data-nome="GriamoreR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Griamore-R.png"
+            alt="GriamoreR"
+          />
+          <p>GriamoreR</p>
+        </div>
+        <div class="personagem" data-nome="GuilaB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Guila-B.png"
+            alt="GuilaB"
+          />
+          <p>GuilaB</p>
+        </div>
+        <div class="personagem" data-nome="GustavG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Gustav-G.png"
+            alt="GustavG"
+          />
+          <p>GustavG</p>
+        </div>
+        <div class="personagem" data-nome="HendricksonG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Hendrickson-G.png"
+            alt="HendricksonG"
+          />
+          <p>HendricksonG</p>
+        </div>
+        <div class="personagem" data-nome="HowzerB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Howzer-B.png"
+            alt="HowzerB"
+          />
+          <p>HowzerB</p>
+        </div>
+        <div class="personagem" data-nome="HowzerG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Howzer-G.png"
+            alt="HowzerG"
+          />
+          <p>HowzerG</p>
+        </div>
+        <div class="personagem" data-nome="JerichoB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Jericho-B.png"
+            alt="JerichoB"
+          />
+          <p>JerichoB</p>
+        </div>
+        <div class="personagem" data-nome="JerichoR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Jericho-R.png"
+            alt="JerichoR"
+          />
+          <p>JerichoR</p>
+        </div>
+        <div class="personagem" data-nome="JillianG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Jillian-G.png"
+            alt="JillianG"
+          />
+          <p>JillianG</p>
+        </div>
+        <div class="personagem" data-nome="RimuruG" data-cor="G">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Rimuru-G.png"
+            alt="RimuruG"
+          />
+          <p>RimuruG</p>
+        </div>
+        <div class="personagem" data-nome="SlaterR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Slater-R.png"
+            alt="SlaterR"
+          />
+          <p>SlaterR</p>
+        </div>
+        <div class="personagem" data-nome="VivianR" data-cor="R">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Vivian-R.png"
+            alt="VivianR"
+          />
+          <p>VivianR</p>
+        </div>
+        <div class="personagem" data-nome="WailloB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Waillo-B.png"
+            alt="WailloB"
+          />
+          <p>WailloB</p>
+        </div>
+        <div class="personagem" data-nome="WeinheidtB" data-cor="B">
+          <img
+            src="../images/7DS Hero Icons/SR/Others/Weinheidt-B.png"
+            alt="WeinheidtB"
+          />
+          <p>WeinheidtB</p>
+        </div>
+        <div class="personagem" data-nome="AllioniG" data-cor="G">
+          <img src="../images/7DS Hero Icons/R/Allioni-G.png" alt="AllioniG" />
+          <p>AllioniG</p>
+        </div>
+        <div class="personagem" data-nome="GolgiusB" data-cor="B">
+          <img src="../images/7DS Hero Icons/R/Golgius-B.png" alt="GolgiusB" />
+          <p>GolgiusB</p>
+        </div>
+        <div class="personagem" data-nome="HugoG" data-cor="G">
+          <img src="../images/7DS Hero Icons/R/Hugo-G.png" alt="HugoG" />
+          <p>HugoG</p>
+        </div>
+        <div class="personagem" data-nome="JudeR" data-cor="R">
+          <img src="../images/7DS Hero Icons/R/Jude-R.png" alt="JudeR" />
+          <p>JudeR</p>
+        </div>
+        <div class="personagem" data-nome="MarmasB" data-cor="B">
+          <img src="../images/7DS Hero Icons/R/Marmas-B.png" alt="MarmasB" />
+          <p>MarmasB</p>
+        </div>
+        <div class="personagem" data-nome="RuinG" data-cor="G">
+          <img src="../images/7DS Hero Icons/R/Ruin-G.png" alt="RuinG" />
+          <p>RuinG</p>
+        </div>
+        <div class="personagem" data-nome="SimonR" data-cor="R">
+          <img src="../images/7DS Hero Icons/R/Simon-R.png" alt="SimonR" />
+          <p>SimonR</p>
+        </div>
+        <div class="personagem" data-nome="TaizooR" data-cor="R">
+          <img src="../images/7DS Hero Icons/R/Taizoo-R.png" alt="TaizooR" />
+          <p>TaizooR</p>
+        </div>
+        <div class="personagem" data-nome="TwigoR" data-cor="R">
+          <img src="../images/7DS Hero Icons/R/Twigo-R.png" alt="TwigoR" />
+          <p>TwigoR</p>
+        </div>
+      </div>
     </main>
 
     <!-- Rodapé -->

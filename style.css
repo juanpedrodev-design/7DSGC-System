@@ -116,3 +116,62 @@ footer {
   padding: 15px;
   margin-top: 30px;
 }
+
+.filtro {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  #search {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 250px;
+    font-size: 14px;
+  }
+
+  .grid-personagens {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .personagem {
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+
+  .personagem img {
+    width: 100%;
+    max-width: 100px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .personagem.hidden { display: none !important; }
+
+  .personagem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+  }
+
+  .personagem p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  /* responsivo para telas menores */
+  @media (max-width: 768px) {
+    .grid-personagens {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .grid-personagens {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
