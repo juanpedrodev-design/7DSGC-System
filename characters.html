@@ -28,8 +28,8 @@
       <h2>Personagens</h2>
 
       <div class="filtro">
-        <input type="text" id="search" placeholder="Pesquisar personagem..." />
-        <select id="filtro-cor">
+        <input type="text" id="search" placeholder="Pesquisar personagem..." autocomplete="off"/>
+        <select id="filtro-cor" style="display:none;">
           <option value="">Todas as cores</option>
           <option value="R">Vermelho</option>
           <option value="B">Azul</option>
@@ -38,6 +38,15 @@
           <option value="D">Escuridão</option>
         </select>
       </div>
+
+  <div class="filtro-imagens">
+    <img src="images/attribute_strength.png" data-value="R" alt="Vermelho" />
+    <img src="images/attribute_speed.png" data-value="B" alt="Azul" />
+    <img src="images/attribute_vitality.png" data-value="G" alt="Verde" />
+    <img src="images/attribute_light.png" data-value="L" alt="Luz" />
+    <img src="images/attribute_dark.png" data-value="D" alt="Escuridão" />
+  </div>
+</div>
 
       <div class="grid-personagens" id="grid-personagens">
         <div class="personagem" data-nome="BannunchuckG" data-cor="G">
@@ -531,12 +540,13 @@
           <img src="images/7DS Hero Icons/SSR/7DS/Liz-R.png" alt="LizR" />
           <p>LizR</p>
         </div>
-        <div class="personagem" data-nome="MeliodasassaultB" data-cor="B">
+        <div class="personagem" data-nome="Meliodas Furioso" data-cor="B" data-link="characters/meliodas/blue_berserk_meliodas.html">
           <img
             src="images/7DS Hero Icons/SSR/7DS/MeliodasAssault-B.png"
             alt="MeliodasassaultB"
           />
-          <p>MeliodasassaultB</p>
+          <p style="font-size: 10px;">[Pesadelo Cruel]</p>
+          <p style="margin-top: -5px;">Meliodas Furioso</p>
         </div>
         <div class="personagem" data-nome="MeliodasassaultG" data-cor="G">
           <img

@@ -132,15 +132,20 @@ footer {
 
   .grid-personagens {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
-    gap: 15px;
+    grid-template-columns: repeat(5, 0fr); /* 5 colunas */
+    gap: 20px;
     margin-top: 20px;
+    justify-content: center;
   }
 
   .personagem {
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
+    background: flex;
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
   }
 
   .personagem img {
@@ -148,19 +153,21 @@ footer {
     max-width: 100px;
     border-radius: 10px;
     transition: 0.3s;
+    padding-top: 10px;
   }
 
   .personagem.hidden { display: none !important; }
 
   .personagem:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+    box-shadow: 0 0 15px #00aaff;
   }
 
   .personagem p {
     margin-top: 5px;
     font-size: 14px;
     font-weight: bold;
+    padding-bottom: 5px;
   }
 
   /* responsivo para telas menores */
@@ -175,3 +182,18 @@ footer {
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
+  .filtro-imagens img {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 6px;
+}
+.filtro-imagens img.selected {
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 4px #00aaff) drop-shadow(0 0 6px #00aaff);
+  transition: filter 0.3s ease;
+}
