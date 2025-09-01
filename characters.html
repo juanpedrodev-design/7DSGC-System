@@ -7,11 +7,57 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="images/Icon.ico" />
     <script src="script.js" defer></script>
+    <script src="char.js" defer></script>
   </head>
+  
   <body>
     <!-- Header com banner -->
-    <header>
+    <header class="header">
       <img src="images/Header.png" alt="Banner 7DSGC" class="banner" />
+      <button id="toggle-theme" class="btn-theme" aria-label="Alternar tema">
+        <!-- Ícone Sol -->
+        <svg
+          class="icon-sun"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+
+        <!-- Ícone Lua -->
+        <svg
+          class="icon-moon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M21 12.79A9 9 0 1 1 11.21 3 
+               7 7 0 0 0 21 12.79z"
+          />
+        </svg>
+      </button>
     </header>
 
     <!-- Menu de navegação -->
@@ -49,42 +95,47 @@
 </div>
 
       <div class="grid-personagens" id="grid-personagens">
-        <div class="personagem" data-nome="BannunchuckG" data-cor="G">
+        <div class="personagem" data-nome="Aventureiro Ban" data-cor="G">
           <img
             src="images/7DS Hero Icons/LR/BanNunchuck-G.png"
             alt="BannunchuckG"
           />
-          <p>BannunchuckG</p>
+          <p style="font-size: 10px;">[O Pecado da Raposa da Ganâncial]</p>
+          <p style="margin-top: -5px;">Aventureiro Ban</p>
         </div>
         <div class="personagem" data-nome="BrunhildR" data-cor="R">
           <img src="images/7DS Hero Icons/LR/Brunhild-R.png" alt="BrunhildR" />
           <p>BrunhildR</p>
         </div>
-        <div class="personagem" data-nome="DianequeenR" data-cor="R">
+        <div class="personagem" data-nome="Rainha Diane" data-cor="R">
           <img
             src="images/7DS Hero Icons/LR/DianeQueen-R.png"
             alt="DianequeenR"
           />
-          <p>DianequeenR</p>
+          <p style="font-size: 10px;">[Ondas da Terra]</p>
+          <p style="margin-top: -5px;">Rainha Diane</p>
         </div>
-        <div class="personagem" data-nome="ElizabethR" data-cor="R">
+        <div class="personagem" data-nome="Princesa Elizabeth" data-cor="R">
           <img
             src="images/7DS Hero Icons/LR/Elizabeth-R.png"
             alt="ElizabethR"
           />
-          <p>ElizabethR</p>
+          <p style="font-size: 10px;">[Nova Lenda]</p>
+          <p style="margin-top: -5px;">Princesa Elizabeth</p>
         </div>
         <div class="personagem" data-nome="EscanorG" data-cor="G">
           <img src="images/7DS Hero Icons/LR/Escanor-G.png" alt="EscanorG" />
           <p>EscanorG</p>
         </div>
-        <div class="personagem" data-nome="GallandB" data-cor="B">
+        <div class="personagem" data-nome="Galland da Verdade" data-cor="B">
           <img src="images/7DS Hero Icons/LR/Galland-B.png" alt="GallandB" />
-          <p>GallandB</p>
+          <p style="font-size: 10px;">[Os Dez Mandamentos]</p>
+<p style="margin-top: -5px;">Galland da Verdade</p>
         </div>
-        <div class="personagem" data-nome="GloxiniaG" data-cor="G">
+        <div class="personagem" data-nome="Gloxinia do Repouso" data-cor="G">
           <img src="images/7DS Hero Icons/LR/Gloxinia-G.png" alt="GloxiniaG" />
-          <p>GloxiniaG</p>
+          <p style="font-size: 10px;">[Os Dez Mandamentos]</p>
+<p style="margin-top: -5px;">Gloxinia do Repouso</p>
         </div>
         <div class="personagem" data-nome="HelbramR" data-cor="R">
           <img src="images/7DS Hero Icons/LR/Helbram-R.png" alt="HelbramR" />
@@ -136,9 +187,10 @@
           />
           <p>RimuruoctagramG</p>
         </div>
-        <div class="personagem" data-nome="ZeldrisB" data-cor="B">
+        <div class="personagem" data-nome="Zeldris da Piedade" data-cor="B">
           <img src="images/7DS Hero Icons/LR/Zeldris-B.png" alt="ZeldrisB" />
-          <p>ZeldrisB</p>
+          <p style="font-size: 10px;">[Os Dez Mandamentos]</p>
+<p style="margin-top: -5px;">Zeldris da Piedade</p>
         </div>
         <div class="personagem" data-nome="ArthurchaosG" data-cor="G">
           <img
