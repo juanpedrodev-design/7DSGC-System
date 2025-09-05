@@ -1,0 +1,393 @@
+/* Tema padrão (claro) */
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #000000;
+}
+
+/* Quando o body tiver a classe .dark */
+body.dark {
+  --bg-color: #1a1b1f;
+  --text-color: #ffffff;
+}
+
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte padrão */
+
+html {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Garante que o header tem as dimensões do banner */
+header {
+  position: relative;
+  display: block;
+}
+
+header .banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Botão fixo no canto do banner, tamanho travado */
+.btn-theme {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 45px;          /* tamanho fixo */
+  height: 45px;         /* tamanho fixo */
+  z-index: 2;           /* fica por cima do banner */
+  border: none;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #333;
+  transition: background 0.25s;  /* remove transform */
+  /* opcional: evita que mudanças globais de fonte mexam no ícone */
+  font-size: 16px;
+}
+
+/* Sem mudança de tamanho ao interagir */
+.btn-theme:hover { background: rgba(255, 255, 255, 0.9); }
+.btn-theme:active,
+.btn-theme:focus { transform: none; }
+.btn-theme:focus-visible { outline: 2px solid #0a84ff; outline-offset: 2px; }
+
+/* Ícone com tamanho fixo em px (não varia com fonte) */
+.icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.125em;
+}
+
+/* Alternância dos ícones */
+.icon-sun, .icon-moon { display: none; }
+body.light .icon-sun { display: block; }
+body.dark  .icon-moon { display: block; }
+
+/* Contraste no tema escuro */
+body.dark .btn-theme { background: rgba(20, 20, 20, 0.6); color: #f3f3f3; }
+body.dark .btn-theme:hover { background: rgba(20, 20, 20, 0.8); }/* Navegação */
+.navbar {
+  background-color: #222;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.navbar li {
+  margin: 0 15px;
+}
+.navbar a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.3s;
+}
+.navbar a:hover,
+.navbar a.active {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+/* Conteúdo */
+main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+main h1 {
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+main p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Seções extras */
+.content-block {
+  margin: 40px 0;
+}
+.content-block h2 {
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-width: 150px;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;               /* ativa flexbox */
+  flex-direction: column;      /* mantém itens em coluna */
+  justify-content: center;     /* centraliza verticalmente */
+  align-items: center;         /* centraliza horizontalmente */
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.filtro {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  #search {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 250px;
+    font-size: 14px;
+  }
+
+  .grid-personagens {
+    display: grid;
+    grid-template-columns: repeat(5, 0fr); /* 5 colunas */
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .personagem {
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    background: flex;
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .personagem img {
+    width: 100%;
+    max-width: 100px;
+    border-radius: 10px;
+    transition: 0.3s;
+    padding-top: 10px;
+  }
+
+  .personagem.hidden { display: none !important; }
+
+  .personagem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00aaff;
+  }
+
+  .personagem p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+
+  /* responsivo para telas menores */
+  @media (max-width: 768px) {
+    .grid-personagens {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .grid-personagens {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .filtro-imagens img {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 6px;
+}
+.filtro-imagens img.selected {
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 4px #00aaff) drop-shadow(0 0 6px #00aaff);
+  transition: filter 0.3s ease;
+}
+
+/* =========================
+   Launcher / Speed-dial A11y
+   ========================= */
+:root{
+  --fab-size: 64px;          /* tamanho do botão Meliodas */
+  --tool-size: 38px;         /* tamanho dos botões acima */
+  --a11y-gap: 10px;
+  --font-scale: 1;           /* escala global de fonte (1 = 100%) */
+}
+
+/* Escala global do texto (funciona bem se você usa rem) */
+html { font-size: calc(16px * var(--font-scale, 1)); }
+
+/* Utilidade para texto somente para leitores de tela */
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0);
+  white-space: nowrap; border: 0;
+}
+
+/* Container fixo no canto (trocar GRID -> FLEX) */
+.a11y {
+  position: fixed;
+  right: calc(max(16px, env(safe-area-inset-right)));
+  bottom: calc(max(16px, env(safe-area-inset-bottom)));
+  z-index: 10000;
+
+  display: flex;            /* <= era grid */
+  flex-direction: column;   /* menu em cima, FAB embaixo */
+  align-items: center;      /* alinha pelo centro do Meliodas */
+  gap: var(--a11y-gap);
+}
+
+/* Botão principal (Meliodas) */
+/* BOTÃO PRINCIPAL — só a imagem, sem fundo/borda/sombra */
+.a11y-fab{
+  position: relative;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 8px;              /* padding invisível para área de toque confortável */
+  width: auto;
+  height: auto;
+  border-radius: 0;          /* nada de círculo */
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform .15s;
+  touch-action: manipulation;
+}
+/* Feedback de interação (opcional e discreto) */
+.a11y-fab:hover img{ transform: translateY(-1px); }
+.a11y-fab:active img{ transform: translateY(0); }
+.a11y-fab:focus-visible{
+  outline: 2px solid #0a84ff;    /* anel de foco acessível */
+  outline-offset: 4px;
+}
+
+/* Menu empilhado e centralizado */
+.a11y-menu {
+  list-style: none; margin: 0; padding: 0;
+  display: grid;
+  gap: var(--a11y-gap);
+  justify-items: center;     /* centra os botões no eixo do container */
+}
+
+/* A IMAGEM em si */
+.a11y-fab img{
+  width: var(--fab-size);
+  height: auto;
+  display: block;
+  border-radius: 0;               /* garante que não arredonde a imagem */
+  pointer-events: none;           /* clique vai para o botão, não para a imagem */
+  user-select: none;
+  /* opcional: melhora leitura em fundos bagunçados */
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,.25));
+}
+/* Remova quaisquer temas aplicados ao .a11y-fab */
+body.dark .a11y-fab{ background: transparent; border-color: transparent; }
+
+/* Botões de ferramenta */
+.a11y-btn {
+  width: var(--tool-size);
+  height: var(--tool-size);
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  display: grid;
+  place-items: center;
+  font: 700 14px/1 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: transform .18s, background .18s, opacity .18s;
+}
+.a11y-btn:hover { background: #f3f3f3; }
+.a11y-btn:focus-visible { outline: 2px solid #0a84ff; outline-offset: 2px; }
+
+/* Animação de abrir/fechar (sem JS pesado) */
+#a11y[data-open="false"] .a11y-btn {
+  opacity: 0; transform: translateY(8px) scale(.98);
+  pointer-events: none;
+}
+#a11y[data-open="true"]  .a11y-btn {
+  opacity: 1; transform: none;
+  pointer-events: auto;
+}
+
+/* Tema escuro – ajuste visual dos botões */
+body.dark .a11y-btn {
+  background: rgba(20,20,20,0.92);
+  color: #f5f5f5;
+  border-color: rgba(255,255,255,0.15);
+}
+
+/* Alto contraste (simples e eficaz, afeta a página inteira) */
+body.high-contrast {
+  filter: contrast(1.25) saturate(1.1);
+}
+
+/* Reduzir animações (página inteira) */
+body.reduce-motion * {
+  animation: none !important;
+  transition-duration: 0.01ms !important;
+}
+html { scroll-behavior: smooth; }
+body.reduce-motion ~ html, /* fallback se a ordem de aplicação variar */
+body.reduce-motion html { scroll-behavior: auto; }

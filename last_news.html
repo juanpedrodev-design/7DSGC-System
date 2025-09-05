@@ -4,58 +4,127 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>7DSGC System</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="images/Icon.ico">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/news.css" />
+    <link rel="icon" type="image/x-icon" href="images/Icon.ico" />
+    <script src="javascript/ally.js" defer></script>
+    <script src="javascript/script.js" defer></script>
+    <script src="javascript/news.js" defer></script>
   </head>
+
+  <!-- Lançador de Acessibilidade -->
+  <div class="a11y" id="a11y" data-open="false">
+    <ul
+      id="a11y-menu"
+      class="a11y-menu"
+      aria-label="Ferramentas de acessibilidade"
+    >
+      <li>
+        <button
+          type="button"
+          class="a11y-btn"
+          id="a11y-theme"
+          aria-pressed="false"
+          aria-label="Alternar tema claro/escuro"
+          title="Tema claro/escuro"
+        >
+          🌓
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="a11y-btn"
+          id="a11y-font-plus"
+          aria-label="Aumentar texto"
+          title="Aumentar texto"
+        >
+          A+
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="a11y-btn"
+          id="a11y-font-minus"
+          aria-label="Diminuir texto"
+          title="Diminuir texto"
+        >
+          A−
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="a11y-btn"
+          id="a11y-contrast"
+          aria-pressed="false"
+          aria-label="Alto contraste"
+          title="Alto contraste"
+        >
+          ◑
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="a11y-btn"
+          id="a11y-motion"
+          aria-pressed="false"
+          aria-label="Reduzir animações"
+          title="Reduzir animações"
+        >
+          ≋
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="a11y-btn"
+          id="a11y-top"
+          aria-label="Voltar ao topo"
+          title="Voltar ao topo"
+        >
+          ↑
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="a11y-btn"
+          id="a11y-reset"
+          aria-label="Resetar preferências"
+          title="Resetar preferências"
+        >
+          ↺
+        </button>
+      </li>
+    </ul>
+
+    <button
+      type="button"
+      class="a11y-fab"
+      id="a11y-fab"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-controls="a11y-menu"
+      aria-label="Abrir ferramentas de acessibilidade"
+      title="Acessibilidade"
+    >
+      <img
+        src="images/Stamp_Meliodas.png"
+        alt=""
+        aria-hidden="true"
+        draggable="false"
+      />
+      <span class="sr-only">Abrir ferramentas de acessibilidade</span>
+    </button>
+  </div>
+
   <body>
     <!-- Header com banner -->
     <header class="header">
       <img src="images/Header.png" alt="Banner 7DSGC" class="banner" />
-      <button id="toggle-theme" class="btn-theme" aria-label="Alternar tema">
-        <!-- Ícone Sol -->
-        <svg
-          class="icon-sun"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <circle cx="12" cy="12" r="5" />
-          <line x1="12" y1="1" x2="12" y2="3" />
-          <line x1="12" y1="21" x2="12" y2="23" />
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-          <line x1="1" y1="12" x2="3" y2="12" />
-          <line x1="21" y1="12" x2="23" y2="12" />
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-        </svg>
-
-        <!-- Ícone Lua -->
-        <svg
-          class="icon-moon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path
-            d="M21 12.79A9 9 0 1 1 11.21 3 
-               7 7 0 0 0 21 12.79z"
-          />
-        </svg>
-      </button>
     </header>
 
     <!-- Menu de navegação -->
@@ -67,57 +136,364 @@
       </ul>
     </nav>
 
+    <!-- NAV ÂNCORAS DA PÁGINA -->
+    <nav class="page-nav" aria-label="Seções de notícias">
+      <a href="#feature">Destaque</a>
+      <a href="#patch-notes">Patch notes</a>
+      <a href="#personagens">Personagens</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#banners">Banners</a>
+      <a href="#reliquias">Relíquias</a>
+      <a href="#outras">Outras</a>
+    </nav>
+
     <!-- Conteúdo principal -->
-    <main>
-      <section class="intro">
-        <h1>Bem-vindo à Wiki do 7DSGC</h1>
-        <p>
-          Aqui você encontrará informações detalhadas sobre o jogo, seus
-          personagens e muito mais!
-        </p>
+    <main class="news">
+      <!-- HERO DESTAQUE (evento principal) -->
+      <section id="feature" class="feature-hero">
+        <a
+          class="feature-hero__link"
+          href="https://forum.netmarble.com/7ds_en"
+          target="_blank"
+          rel="noopener"
+        >
+          <picture>
+            <!-- exemplo de *art direction* (troque as imagens) -->
+            <source
+              media="(min-width: 1024px)"
+              srcset="images/gelda event.jpg"
+            />
+            <img
+              class="feature-hero__img"
+              src="images/event gelda.png"
+              alt="Grande evento: Festival [Exemplo] chegou!"
+              loading="eager"
+            />
+          </picture>
+
+          <div class="feature-hero__overlay"></div>
+          <div class="feature-hero__content">
+            <span class="badge is-event">Evento principal</span>
+            <h1 class="feature-hero__title">
+              "Dreamy Summer Getaway” — Chefões, recompensas e banner especial!
+            </h1>
+            <p class="feature-hero__dek">
+              Novo evento com missões por tempo limitado, chefe mundial e login
+              bônus. Veja horários, pré-requisitos e dicas rápidas.
+            </p>
+            <div class="meta">
+              <time datetime="2025-09-01">01 set 2025</time>
+              <span>•</span>
+              <span>Netmarble Forum</span>
+            </div>
+          </div>
+        </a>
+      </section>
+
+      <!-- PATCH NOTES -->
+      <section id="patch-notes" class="news-section">
+        <header class="section-head">
+          <h2>Últimos patch notes</h2>
+          <a
+            class="section-head__more"
+            href="https://forum.netmarble.com/7ds_en/list/45/1"
+            target="_blank"
+            rel="noopener"
+            >Ver todos</a
+          >
+        </header>
+
+        <div class="news-grid" id="grid-patch">
+          <!-- CARD MODELO: DUPLIQUE E EDITE -->
+          <article class="news-card" data-category="patch">
+            <a
+              class="news-card__link"
+              href="https://forum.netmarble.com/7ds_en/view/45/1234567"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="news-card__img"
+                src="images/patch-1.jpg"
+                alt="Patch 1.2.3 — Ajustes de balanceamento e correções"
+                loading="lazy"
+              />
+              <div class="news-card__body">
+                <span class="badge">Patch notes</span>
+                <h3 class="news-card__title">
+                  Patch 1.2.3 — Ajustes de balanceamento e correções
+                </h3>
+                <p class="news-card__excerpt">
+                  Melhorias na IA de chefes, ajustes em Relíquias exclusivas e
+                  correções de travamentos no Android.
+                </p>
+                <div class="meta">
+                  <time datetime="2025-08-29">29 ago 2025</time>
+                  <span>•</span>
+                  <span>Leitura: 3 min</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="news-card is-hidden" data-category="patch">
+            <a class="news-card__link" href="#" target="_blank" rel="noopener">
+              <img
+                class="news-card__img"
+                src="images/patch-2.jpg"
+                alt="Notas de atualização — Evento de cooperação"
+                loading="lazy"
+              />
+              <div class="news-card__body">
+                <span class="badge">Patch notes</span>
+                <h3 class="news-card__title">
+                  Notas de atualização — Evento de cooperação
+                </h3>
+                <p class="news-card__excerpt">
+                  O evento de cooperação chega com melhorias de estabilidade e
+                  novo sistema de ranking.
+                </p>
+                <div class="meta">
+                  <time datetime="2025-08-22">22 ago 2025</time>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- ... (adicione mais cards) -->
+        </div>
+
+        <button class="load-more" data-target="#grid-patch">Ver mais</button>
+      </section>
+
+      <!-- PERSONAGENS NOVOS -->
+      <section id="personagens" class="news-section">
+        <header class="section-head">
+          <h2>Personagens novos</h2>
+        </header>
+
+        <div class="news-grid" id="grid-chars">
+          <article class="news-card" data-category="personagens">
+            <a class="news-card__link" href="#" target="_blank" rel="noopener">
+              <img
+                class="news-card__img"
+                src="images/char-meliodas-s3.jpg"
+                alt="Meliodas [Título do banner]"
+                loading="lazy"
+              />
+              <div class="news-card__body">
+                <span class="badge">Personagem</span>
+                <h3 class="news-card__title">
+                  Meliodas [Espírito do Festival]
+                </h3>
+                <p class="news-card__excerpt">
+                  Novas habilidades com foco em DPS explosivo e sinergia com
+                  Relíquias de Crítico.
+                </p>
+                <div class="meta">
+                  <time datetime="2025-08-15">15 ago 2025</time>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="news-card is-hidden" data-category="personagens">
+            <a class="news-card__link" href="#">
+              <img
+                class="news-card__img"
+                src="images/char-elizabeth.jpg"
+                alt="Elizabeth [Luz da Deusa]"
+                loading="lazy"
+              />
+              <div class="news-card__body">
+                <span class="badge">Personagem</span>
+                <h3 class="news-card__title">Elizabeth [Luz da Deusa]</h3>
+                <p class="news-card__excerpt">
+                  Suporte potente com cura reativa e purificação em área.
+                </p>
+                <div class="meta">
+                  <time datetime="2025-08-01">01 ago 2025</time>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <button class="load-more" data-target="#grid-chars">Ver mais</button>
+      </section>
+
+      <!-- EVENTOS NOVOS -->
+      <section id="eventos" class="news-section">
+        <header class="section-head"><h2>Eventos novos</h2></header>
+        <div class="news-grid" id="grid-events">
+          <article class="news-card" data-category="eventos">
+            <a class="news-card__link" href="#">
+              <img
+                class="news-card__img"
+                src="images/costume event summer.jpg"
+                alt="Chefe Mundial — [Nome]"
+                loading="lazy"
+              />
+              <div class="news-card__body">
+                <span class="badge">Evento</span>
+                <h3 class="news-card__title">
+                  Trajes de Verão — Novas skins para personagens
+                </h3>
+                <p class="news-card__excerpt">
+                  Novas skins de verão disponíveis na loja por tempo limitado.
+                </p>
+                <div class="meta">
+                  <time datetime="2025-08-27">27 ago 2025</time>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="news-card is-hidden" data-category="eventos">
+            <a class="news-card__link" href="#">
+              <img
+                class="news-card__img"
+                src="images/final boss gowther.jpg"
+                alt="Torre de Desafios — Temporada 9"
+                loading="lazy"
+              />
+              <div class="news-card__body">
+                <span class="badge">Evento</span>
+                <h3 class="news-card__title">
+                  O retorno do chefe final - Gowther
+                </h3>
+                <p class="news-card__excerpt">
+                  O final boss de Gowther retornou com novos desafios e
+                  recomepensas.
+                </p>
+                <div class="meta">
+                  <time datetime="2025-08-27">27 ago 2025</time>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <button class="load-more" data-target="#grid-events">Ver mais</button>
+      </section>
+
+      <!-- BANNERS NOVOS -->
+      <section id="banners" class="news-section">
+        <header class="section-head"><h2>Banners novos</h2></header>
+        <div class="news-grid" id="grid-banners">
+          <article class="news-card" data-category="banners">
+            <a class="news-card__link" href="#">
+              <img
+                class="news-card__img"
+                src="images/banner-festival.jpg"
+                alt="Banner Festival — Step-Up garantido"
+                loading="lazy"
+              />
+              <div class="news-card__body">
+                <span class="badge">Banner</span>
+                <h3 class="news-card__title">
+                  Festival Step-Up — SSR garantido no passo 7
+                </h3>
+                <p class="news-card__excerpt">
+                  Confira as taxas, lista de personagens e o melhor
+                  custo-benefício para gemas.
+                </p>
+                <div class="meta">
+                  <time datetime="2025-08-10">10 ago 2025</time>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- ... -->
+        </div>
+        <button class="load-more" data-target="#grid-banners">Ver mais</button>
+      </section>
+
+      <!-- RELÍQUIAS NOVAS -->
+      <section id="reliquias" class="news-section">
+        <header class="section-head"><h2>Relíquias novas</h2></header>
+        <div class="news-grid" id="grid-relics">
+          <article class="news-card" data-category="reliquias">
+            <a class="news-card__link" href="#">
+              <img
+                class="news-card__img"
+                src="images/thor event relic.jpg"
+                alt="Relíquia de Meliodas — Coração do Dragão"
+                loading="lazy"
+              />
+              <div class="news-card__body">
+                <span class="badge">Relíquia</span>
+                <h3 class="news-card__title">
+                  Relíquia: Machado Antigo de Jord
+                </h3>
+                <p class="news-card__excerpt">
+                  Adiciona 200.000 ao valor de Trovão Divino no inicio da
+                  batalha...
+                </p>
+                <div class="meta">
+                  <time datetime="2025-08-12">12 ago 2025</time>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <button class="load-more" data-target="#grid-relics">Ver mais</button>
+      </section>
+
+      <!-- OUTRAS NOVIDADES -->
+      <section id="outras" class="news-section">
+        <header class="section-head"><h2>Outras novidades</h2></header>
+        <div class="news-grid" id="grid-other">
+          <article class="news-card" data-category="outras">
+            <a class="news-card__link" href="#">
+              <img
+                class="news-card__img"
+                src="images/site-update.jpg"
+                alt="Atualização do site — nova página de notícias"
+                loading="lazy"
+              />
+              <div class="news-card__body">
+                <span class="badge">Do site</span>
+                <h3 class="news-card__title">
+                  Nova página de notícias no ar 🎉
+                </h3>
+                <p class="news-card__excerpt">
+                  Agora você encontra os últimos eventos, banners e patch notes
+                  num só lugar.
+                </p>
+                <div class="meta">
+                  <time datetime="2025-08-30">30 ago 2025</time>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="news-card is-hidden" data-category="outras">
+            <a class="news-card__link" href="#">
+              <img
+                class="news-card__img"
+                src="images/discord.jpg"
+                alt="Entramos no Discord — Comunidade 7DS"
+                loading="lazy"
+              />
+              <div class="news-card__body">
+                <span class="badge">Comunidade</span>
+                <h3 class="news-card__title">
+                  Estamos no Discord — participe!
+                </h3>
+                <p class="news-card__excerpt">
+                  Dicas, guias e alertas de eventos em tempo real. Link no topo
+                  do site.
+                </p>
+                <div class="meta">
+                  <time datetime="2025-08-18">18 ago 2025</time>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <button class="load-more" data-target="#grid-other">Ver mais</button>
       </section>
     </main>
-
-
-    <!-- Últimos Personagens -->
-    <section class="content-block">
-      <h2>Últimos Personagens</h2>
-      <div class="cards">
-        <!-- Cards de exemplo -->
-        <div class="card"><a href="characters/meliodas/blue_berserk_meliodas.html"><img src="images/Char Images/Blue_Berserk_Meliodas.png"></a></div>
-        <div class="card"><img src="images/Char Images/Dark_Oppressor_Demon_King.png"></div>
-        <div class="card"><img src="images/Char Images/Red_Fairy_Helbram.png"></div>
-      </div>
-    </section>
-
-    <!-- Últimos Eventos -->
-    <section class="content-block">
-      <h2>Últimos Eventos</h2>
-      <div class="cards">
-        <div class="card"><img src="images/Event Images/Last_Event_1.jpg"></div>
-        <div class="card"><img src="images/Event Images/Last_Event_2.jpg"></div>
-      </div>
-    </section>
-
-    <!-- Últimas Relíquias -->
-    <section class="content-block">
-      <h2>Últimas Relíquias</h2>
-      <div class="cards">
-        <div class="card"><img src="images/Relic Images/Relic_Sung.png"></div>
-        <div class="card"><img src="images/Relic Images/Relic_Sung.png"></div>
-      </div>
-    </section>
-
-    <!-- Últimos Banners -->
-    <section class="content-block">
-      <h2>Últimos Banners</h2>
-      <div class="cards">
-        <div class="card"><img src="images/Banner Images/Last_Banner_1.jpg"></div>
-        <div class="card"><img src="images/Banner Images/Last_Banner_1.jpg"></div>
-      </div>
-    </section>
-  </main>
-
     <!-- Rodapé -->
     <footer>
       <p>&copy; 2025 Wiki 7DSGC - Feito por fãs, para fãs.</p>

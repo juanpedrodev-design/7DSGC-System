@@ -4,60 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>7DSGC System</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="icon" type="image/x-icon" href="images/Icon.ico" />
-    <script src="script.js" defer></script>
-    <script src="char.js" defer></script>
+    <script src="javascript/ally.js" defer></script>
+    <script src="javascript/script.js" defer></script>
+    <script src="javascript/char.js" defer></script>
   </head>
+
+  <!-- Lançador de Acessibilidade -->
+<div class="a11y" id="a11y" data-open="false">
+  <ul id="a11y-menu" class="a11y-menu" aria-label="Ferramentas de acessibilidade">
+    <li><button type="button" class="a11y-btn" id="a11y-theme" aria-pressed="false" aria-label="Alternar tema claro/escuro" title="Tema claro/escuro">🌓</button></li>
+    <li><button type="button" class="a11y-btn" id="a11y-font-plus" aria-label="Aumentar texto" title="Aumentar texto">A+</button></li>
+    <li><button type="button" class="a11y-btn" id="a11y-font-minus" aria-label="Diminuir texto" title="Diminuir texto">A−</button></li>
+    <li><button type="button" class="a11y-btn" id="a11y-contrast" aria-pressed="false" aria-label="Alto contraste" title="Alto contraste">◑</button></li>
+    <li><button type="button" class="a11y-btn" id="a11y-motion" aria-pressed="false" aria-label="Reduzir animações" title="Reduzir animações">≋</button></li>
+    <li><button type="button" class="a11y-btn" id="a11y-top" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button></li>
+    <li><button type="button" class="a11y-btn" id="a11y-reset" aria-label="Resetar preferências" title="Resetar preferências">↺</button></li>
+  </ul>
+
+  <button type="button"
+          class="a11y-fab"
+          id="a11y-fab"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="a11y-menu"
+          aria-label="Abrir ferramentas de acessibilidade"
+          title="Acessibilidade">
+    <img src="images/Stamp_Meliodas.png" alt="" aria-hidden="true" draggable="false">
+    <span class="sr-only">Abrir ferramentas de acessibilidade</span>
+  </button>
+</div>
   
   <body>
     <!-- Header com banner -->
     <header class="header">
       <img src="images/Header.png" alt="Banner 7DSGC" class="banner" />
-      <button id="toggle-theme" class="btn-theme" aria-label="Alternar tema">
-        <!-- Ícone Sol -->
-        <svg
-          class="icon-sun"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <circle cx="12" cy="12" r="5" />
-          <line x1="12" y1="1" x2="12" y2="3" />
-          <line x1="12" y1="21" x2="12" y2="23" />
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-          <line x1="1" y1="12" x2="3" y2="12" />
-          <line x1="21" y1="12" x2="23" y2="12" />
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-        </svg>
-
-        <!-- Ícone Lua -->
-        <svg
-          class="icon-moon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path
-            d="M21 12.79A9 9 0 1 1 11.21 3 
-               7 7 0 0 0 21 12.79z"
-          />
-        </svg>
-      </button>
     </header>
 
     <!-- Menu de navegação -->
@@ -137,20 +119,22 @@
           <p style="font-size: 10px;">[Os Dez Mandamentos]</p>
 <p style="margin-top: -5px;">Gloxinia do Repouso</p>
         </div>
-        <div class="personagem" data-nome="HelbramR" data-cor="R">
+        <div class="personagem" data-nome="Helbram" data-cor="R">
           <img src="images/7DS Hero Icons/LR/Helbram-R.png" alt="HelbramR" />
-          <p>HelbramR</p>
+          <p style="font-size: 10px;">[Reencarnação da Vingança]</p>
+<p style="margin-top: -5px;">Fada Helbram</p>
         </div>
         <div class="personagem" data-nome="KingB" data-cor="B">
           <img src="images/7DS Hero Icons/LR/King-B.png" alt="KingB" />
           <p>KingB</p>
         </div>
-        <div class="personagem" data-nome="LilliaawkR" data-cor="R">
+        <div class="personagem" data-nome="Lillia do Desejo" data-cor="R">
           <img
             src="images/7DS Hero Icons/LR/LilliaAwk-R.png"
             alt="LilliaawkR"
           />
-          <p>LilliaawkR</p>
+          <p style="font-size: 10px;">[Advento da Destruição]</p>
+          <p style="margin-top: -5px;">Lillia do Desejo</p>
         </div>
         <div class="personagem" data-nome="LudocielmargaretB" data-cor="B">
           <img
@@ -159,12 +143,13 @@
           />
           <p>LudocielmargaretB</p>
         </div>
-        <div class="personagem" data-nome="MeliodaslvR" data-cor="R">
+        <div class="personagem" data-nome="Meliodas Lostvayne" data-cor="R">
           <img
             src="images/7DS Hero Icons/LR/MeliodasLV-R.png"
             alt="MeliodaslvR"
           />
-          <p>MeliodaslvR</p>
+          <p style="font-size: 10px;">[Dublê de Corpo Virtual]</p>
+<p style="margin-top: -5px;">Meliodas Lostvayne</p>
         </div>
         <div class="personagem" data-nome="MerlinkidG" data-cor="G">
           <img
