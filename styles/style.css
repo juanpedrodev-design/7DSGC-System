@@ -39,6 +39,18 @@ body {
 header {
   position: relative;
   display: block;
+  height: auto;             /* mantém proporção */
+  object-fit: cover;        /* se você fixar altura, ajuda a “preencher” */
+  object-position: center;
+}
+
+/* (Opcional) Se quiser um hero mais alto no desktop: */
+@media (min-width: 900px){
+  header .banner{
+    /* ex.: altura fixa estilão hero; remova se não quiser cortar */
+    height: 300px;
+    object-fit: cover;
+  }
 }
 
 header .banner {

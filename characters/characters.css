@@ -16,6 +16,18 @@ h2 {
   padding: 20px;
 }
 
+/* Mobile: 1 coluna (empilha tudo) */
+@media (max-width: 900px){
+  .personagem-layout{
+    grid-template-columns: 1fr;
+  }
+  .personagem-layout > .coluna{
+    grid-column: 1 / -1;
+  }
+  /* centraliza conteúdos mais largos */
+  .arte-personagem{ margin-inline: auto; }
+}
+
 /* Colunas */
 /* Padrão (tema claro) */
 body.light .coluna {
